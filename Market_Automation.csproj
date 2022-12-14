@@ -103,42 +103,6 @@
     <Compile Include="Forms\MainMenu.Designer.cs">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\categoryTB.cs">
-      <DependentUpon>marketDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\marketDB.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>marketDB.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\marketDB.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>marketDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\marketDB.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>marketDB.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Models\productsTB.cs">
-      <DependentUpon>marketDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\storeTB.cs">
-      <DependentUpon>marketDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\supplierTB.cs">
-      <DependentUpon>marketDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\sysdiagrams.cs">
-      <DependentUpon>marketDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\userInformationTB.cs">
-      <DependentUpon>marketDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\userTB.cs">
-      <DependentUpon>marketDB.tt</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ThemeColor.cs" />
@@ -175,13 +139,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EntityDeploy Include="Models\marketDB.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>marketDB.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="Models\marketDB.edmx.diagram">
-      <DependentUpon>marketDB.edmx</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -198,18 +155,6 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Models\marketDB.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>marketDB.edmx</DependentUpon>
-      <LastGenOutput>marketDB.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Models\marketDB.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>marketDB.edmx</DependentUpon>
-      <LastGenOutput>marketDB.cs</LastGenOutput>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
