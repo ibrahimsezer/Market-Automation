@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="marketDBString" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="categoryTB">
+    <Key>
+      <PropertyRef Name="categoryID" />
+    </Key>
+    <Property Name="categoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="categoryName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="productID" Type="Int32" />
+    <NavigationProperty Name="productsTB" Relationship="Self.FK_categoryTB_productsTB" FromRole="categoryTB" ToRole="productsTB" />
+    <NavigationProperty Name="storeTB" Relationship="Self.FK_storeTB_categoryTB" FromRole="categoryTB" ToRole="storeTB" />
+  </EntityType>
+  <EntityType Name="productsTB">
+    <Key>
+      <PropertyRef Name="productID" />
+    </Key>
+    <Property Name="productID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="productName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="product_UnitPrice" Type="Double" Nullable="false" />
+    <Property Name="product_KgPrice" Type="Double" Nullable="false" />
+    <NavigationProperty Name="categoryTB" Relationship="Self.FK_categoryTB_productsTB" FromRole="productsTB" ToRole="categoryTB" />
+    <NavigationProperty Name="storeTB" Relationship="Self.FK_storeTB_productsTB" FromRole="productsTB" ToRole="storeTB" />
+  </EntityType>
+  <EntityType Name="storeTB">
+    <Key>
+      <PropertyRef Name="storeID" />
+    </Key>
+    <Property Name="storeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="storeName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="storeAddress" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="supplierID" Type="Int32" />
+    <Property Name="categoryID" Type="Int32" />
+    <Property Name="productID" Type="Int32" />
+    <Property Name="userID" Type="Int32" />
+    <NavigationProperty Name="categoryTB" Relationship="Self.FK_storeTB_categoryTB" FromRole="storeTB" ToRole="categoryTB" />
+    <NavigationProperty Name="productsTB" Relationship="Self.FK_storeTB_productsTB" FromRole="storeTB" ToRole="productsTB" />
+    <NavigationProperty Name="supplierTB" Relationship="Self.FK_storeTB_supplierTB" FromRole="storeTB" ToRole="supplierTB" />
+    <NavigationProperty Name="userTB" Relationship="Self.FK_storeTB_userTB" FromRole="storeTB" ToRole="userTB" />
+  </EntityType>
+  <EntityType Name="supplierTB">
+    <Key>
+      <PropertyRef Name="supplierID" />
+    </Key>
+    <Property Name="supplierID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="supplierName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="supplierPassword" Type="String" MaxLength="16" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="supplierRName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="supplierSurname" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="supplierEmail" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="supplierPNumber" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="userCity" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="storeTB" Relationship="Self.FK_storeTB_supplierTB" FromRole="supplierTB" ToRole="storeTB" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="userInformationTB">
+    <Key>
+      <PropertyRef Name="userInformationID" />
+    </Key>
+    <Property Name="userInformationID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="userID" Type="Int32" />
+    <Property Name="userIdentity" Type="String" MaxLength="11" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="userRealName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="userSurname" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="userBirthdate" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="userMotherName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="userFatherName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="userPhone" Type="String" MaxLength="15" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="userEmail" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="userCity" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="userGender" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="userTB" Relationship="Self.FK_userInformationTB_userTB" FromRole="userInformationTB" ToRole="userTB" />
+  </EntityType>
+  <EntityType Name="userTB">
+    <Key>
+      <PropertyRef Name="userID" />
+    </Key>
+    <Property Name="userID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="userName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="userPassword" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Name="userAuthority" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="storeTB" Relationship="Self.FK_storeTB_userTB" FromRole="userTB" ToRole="storeTB" />
+    <NavigationProperty Name="userInformationTB" Relationship="Self.FK_userInformationTB_userTB" FromRole="userTB" ToRole="userInformationTB" />
+  </EntityType>
+  <EntityType Name="renkler">
+    <Key>
+      <PropertyRef Name="renk" />
+    </Key>
+    <Property Name="renk" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_categoryTB_productsTB">
+    <End Role="productsTB" Type="Self.productsTB" Multiplicity="0..1" />
+    <End Role="categoryTB" Type="Self.categoryTB" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="productsTB">
+        <PropertyRef Name="productID" />
+      </Principal>
+      <Dependent Role="categoryTB">
+        <PropertyRef Name="productID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_storeTB_categoryTB">
+    <End Role="categoryTB" Type="Self.categoryTB" Multiplicity="0..1" />
+    <End Role="storeTB" Type="Self.storeTB" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="categoryTB">
+        <PropertyRef Name="categoryID" />
+      </Principal>
+      <Dependent Role="storeTB">
+        <PropertyRef Name="categoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_storeTB_productsTB">
+    <End Role="productsTB" Type="Self.productsTB" Multiplicity="0..1" />
+    <End Role="storeTB" Type="Self.storeTB" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="productsTB">
+        <PropertyRef Name="productID" />
+      </Principal>
+      <Dependent Role="storeTB">
+        <PropertyRef Name="productID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_storeTB_supplierTB">
+    <End Role="supplierTB" Type="Self.supplierTB" Multiplicity="0..1" />
+    <End Role="storeTB" Type="Self.storeTB" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="supplierTB">
+        <PropertyRef Name="supplierID" />
+      </Principal>
+      <Dependent Role="storeTB">
+        <PropertyRef Name="supplierID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_storeTB_userTB">
+    <End Role="userTB" Type="Self.userTB" Multiplicity="0..1" />
+    <End Role="storeTB" Type="Self.storeTB" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="userTB">
+        <PropertyRef Name="userID" />
+      </Principal>
+      <Dependent Role="storeTB">
+        <PropertyRef Name="userID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_userInformationTB_userTB">
+    <End Role="userTB" Type="Self.userTB" Multiplicity="0..1" />
+    <End Role="userInformationTB" Type="Self.userInformationTB" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="userTB">
+        <PropertyRef Name="userID" />
+      </Principal>
+      <Dependent Role="userInformationTB">
+        <PropertyRef Name="userID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="marketDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="categoryTB" EntityType="Self.categoryTB" />
+    <EntitySet Name="productsTB" EntityType="Self.productsTB" />
+    <EntitySet Name="storeTB" EntityType="Self.storeTB" />
+    <EntitySet Name="supplierTB" EntityType="Self.supplierTB" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="userInformationTB" EntityType="Self.userInformationTB" />
+    <EntitySet Name="userTB" EntityType="Self.userTB" />
+    <EntitySet Name="renkler" EntityType="Self.renkler" />
+    <AssociationSet Name="FK_categoryTB_productsTB" Association="Self.FK_categoryTB_productsTB">
+      <End Role="productsTB" EntitySet="productsTB" />
+      <End Role="categoryTB" EntitySet="categoryTB" />
+    </AssociationSet>
+    <AssociationSet Name="FK_storeTB_categoryTB" Association="Self.FK_storeTB_categoryTB">
+      <End Role="categoryTB" EntitySet="categoryTB" />
+      <End Role="storeTB" EntitySet="storeTB" />
+    </AssociationSet>
+    <AssociationSet Name="FK_storeTB_productsTB" Association="Self.FK_storeTB_productsTB">
+      <End Role="productsTB" EntitySet="productsTB" />
+      <End Role="storeTB" EntitySet="storeTB" />
+    </AssociationSet>
+    <AssociationSet Name="FK_storeTB_supplierTB" Association="Self.FK_storeTB_supplierTB">
+      <End Role="supplierTB" EntitySet="supplierTB" />
+      <End Role="storeTB" EntitySet="storeTB" />
+    </AssociationSet>
+    <AssociationSet Name="FK_storeTB_userTB" Association="Self.FK_storeTB_userTB">
+      <End Role="userTB" EntitySet="userTB" />
+      <End Role="storeTB" EntitySet="storeTB" />
+    </AssociationSet>
+    <AssociationSet Name="FK_userInformationTB_userTB" Association="Self.FK_userInformationTB_userTB">
+      <End Role="userTB" EntitySet="userTB" />
+      <End Role="userInformationTB" EntitySet="userInformationTB" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

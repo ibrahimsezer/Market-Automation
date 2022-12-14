@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="marketDBString.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="categoryTB">
+    <Key>
+      <PropertyRef Name="categoryID" />
+    </Key>
+    <Property Name="categoryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="categoryName" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="productID" Type="int" />
+  </EntityType>
+  <EntityType Name="productsTB">
+    <Key>
+      <PropertyRef Name="productID" />
+    </Key>
+    <Property Name="productID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="productName" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="product_UnitPrice" Type="float" Nullable="false" />
+    <Property Name="product_KgPrice" Type="float" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'marketDB.dbo.renkler' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="renkler">
+    <Key>
+      <PropertyRef Name="renk" />
+    </Key>
+    <Property Name="renk" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="storeTB">
+    <Key>
+      <PropertyRef Name="storeID" />
+    </Key>
+    <Property Name="storeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="storeName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="storeAddress" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="supplierID" Type="int" />
+    <Property Name="categoryID" Type="int" />
+    <Property Name="productID" Type="int" />
+    <Property Name="userID" Type="int" />
+  </EntityType>
+  <EntityType Name="supplierTB">
+    <Key>
+      <PropertyRef Name="supplierID" />
+    </Key>
+    <Property Name="supplierID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="supplierName" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="supplierPassword" Type="nvarchar" MaxLength="16" Nullable="false" />
+    <Property Name="supplierRName" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="supplierSurname" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="supplierEmail" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="supplierPNumber" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="userCity" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="userInformationTB">
+    <Key>
+      <PropertyRef Name="userInformationID" />
+    </Key>
+    <Property Name="userInformationID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="userID" Type="int" />
+    <Property Name="userIdentity" Type="char" MaxLength="11" Nullable="false" />
+    <Property Name="userRealName" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="userSurname" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="userBirthdate" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="userMotherName" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="userFatherName" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="userPhone" Type="char" MaxLength="15" Nullable="false" />
+    <Property Name="userEmail" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="userCity" Type="varchar" MaxLength="30" />
+    <Property Name="userGender" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="userTB">
+    <Key>
+      <PropertyRef Name="userID" />
+    </Key>
+    <Property Name="userID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="userName" Type="nvarchar" MaxLength="20" />
+    <Property Name="userPassword" Type="nvarchar" MaxLength="16" />
+    <Property Name="userAuthority" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <Association Name="FK_categoryTB_productsTB">
+    <End Role="productsTB" Type="Self.productsTB" Multiplicity="0..1" />
+    <End Role="categoryTB" Type="Self.categoryTB" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="productsTB">
+        <PropertyRef Name="productID" />
+      </Principal>
+      <Dependent Role="categoryTB">
+        <PropertyRef Name="productID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_storeTB_categoryTB">
+    <End Role="categoryTB" Type="Self.categoryTB" Multiplicity="0..1" />
+    <End Role="storeTB" Type="Self.storeTB" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="categoryTB">
+        <PropertyRef Name="categoryID" />
+      </Principal>
+      <Dependent Role="storeTB">
+        <PropertyRef Name="categoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_storeTB_productsTB">
+    <End Role="productsTB" Type="Self.productsTB" Multiplicity="0..1" />
+    <End Role="storeTB" Type="Self.storeTB" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="productsTB">
+        <PropertyRef Name="productID" />
+      </Principal>
+      <Dependent Role="storeTB">
+        <PropertyRef Name="productID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_storeTB_supplierTB">
+    <End Role="supplierTB" Type="Self.supplierTB" Multiplicity="0..1" />
+    <End Role="storeTB" Type="Self.storeTB" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="supplierTB">
+        <PropertyRef Name="supplierID" />
+      </Principal>
+      <Dependent Role="storeTB">
+        <PropertyRef Name="supplierID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_storeTB_userTB">
+    <End Role="userTB" Type="Self.userTB" Multiplicity="0..1" />
+    <End Role="storeTB" Type="Self.storeTB" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="userTB">
+        <PropertyRef Name="userID" />
+      </Principal>
+      <Dependent Role="storeTB">
+        <PropertyRef Name="userID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_userInformationTB_userTB">
+    <End Role="userTB" Type="Self.userTB" Multiplicity="0..1" />
+    <End Role="userInformationTB" Type="Self.userInformationTB" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="userTB">
+        <PropertyRef Name="userID" />
+      </Principal>
+      <Dependent Role="userInformationTB">
+        <PropertyRef Name="userID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="marketDBStringStoreContainer">
+    <EntitySet Name="categoryTB" EntityType="Self.categoryTB" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="productsTB" EntityType="Self.productsTB" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="storeTB" EntityType="Self.storeTB" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="supplierTB" EntityType="Self.supplierTB" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="userInformationTB" EntityType="Self.userInformationTB" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="userTB" EntityType="Self.userTB" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="renkler" EntityType="Self.renkler" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [renkler].[renk] AS [renk]
+    FROM [dbo].[renkler] AS [renkler]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_categoryTB_productsTB" Association="Self.FK_categoryTB_productsTB">
+      <End Role="productsTB" EntitySet="productsTB" />
+      <End Role="categoryTB" EntitySet="categoryTB" />
+    </AssociationSet>
+    <AssociationSet Name="FK_storeTB_categoryTB" Association="Self.FK_storeTB_categoryTB">
+      <End Role="categoryTB" EntitySet="categoryTB" />
+      <End Role="storeTB" EntitySet="storeTB" />
+    </AssociationSet>
+    <AssociationSet Name="FK_storeTB_productsTB" Association="Self.FK_storeTB_productsTB">
+      <End Role="productsTB" EntitySet="productsTB" />
+      <End Role="storeTB" EntitySet="storeTB" />
+    </AssociationSet>
+    <AssociationSet Name="FK_storeTB_supplierTB" Association="Self.FK_storeTB_supplierTB">
+      <End Role="supplierTB" EntitySet="supplierTB" />
+      <End Role="storeTB" EntitySet="storeTB" />
+    </AssociationSet>
+    <AssociationSet Name="FK_storeTB_userTB" Association="Self.FK_storeTB_userTB">
+      <End Role="userTB" EntitySet="userTB" />
+      <End Role="storeTB" EntitySet="storeTB" />
+    </AssociationSet>
+    <AssociationSet Name="FK_userInformationTB_userTB" Association="Self.FK_userInformationTB_userTB">
+      <End Role="userTB" EntitySet="userTB" />
+      <End Role="userInformationTB" EntitySet="userInformationTB" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
