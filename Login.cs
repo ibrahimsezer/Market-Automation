@@ -79,9 +79,9 @@ namespace Market_Automation
                     }
                     else
                     {
-                        loginPage.BackColor = Color.Red;
+                        loginPage.panel2.BackColor = Color.Red;
                         MessageBox.Show("You entered your information incorrectly.", "You Could Not Log in", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        loginPage.BackColor = default(Color);
+                        loginPage.panel2.BackColor = Color.FromArgb(51, 51, 76);
                     }
                 }
                 catch (Exception error)
@@ -192,6 +192,16 @@ namespace Market_Automation
         private void label1_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void closebtn_MouseHover(object sender, EventArgs e)
+        {
+            closebtn.BackColor = Color.Red;
+        }
+
+        private void closebtn_MouseLeave(object sender, EventArgs e)
+        {
+            closebtn.BackColor = Color.FromArgb(51, 51, 76);
         }
     }
 }
