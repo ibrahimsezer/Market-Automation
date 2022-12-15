@@ -81,3 +81,6 @@ D:\GITHUB\Market-Automation\obj\Debug\Market_Automation.csproj.CoreCompileInputs
 D:\GITHUB\Market-Automation\obj\Debug\Market_Automation.csproj.CopyComplete
 D:\GITHUB\Market-Automation\obj\Debug\Market_Automation.exe
 D:\GITHUB\Market-Automation\obj\Debug\Market_Automation.pdb
+C:\Users\ensar\Documents\GitHub\Market-Automation\obj\Debug\Market_Automation.Settings.List_Users.resources
+C:\Users\ensar\Documents\GitHub\Market-Automation\obj\Debug\Market_Automation.Settings.Create_an_Account.resources
+C:\Users\ensar\Documents\GitHub\Market-Automation\obj\Debug\Market_Automation.Settings.Change_Password.resources

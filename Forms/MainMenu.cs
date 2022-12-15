@@ -23,7 +23,6 @@ namespace Market_Automation
         {
             InitializeComponent();
             random = new Random();
-            btnCloseChildForms.Visible = false;
             this.Text = string.Empty;
             this.ControlBox = false;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
@@ -155,11 +154,6 @@ namespace Market_Automation
             panelLogo.BackColor = Color.FromArgb(39,39,58);
             currentButton = null;
             btnCloseChildForms.Visible = false;
-        }
-
-        private void panelTitleBar_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void panelDesktopPanel_Paint(object sender, PaintEventArgs e)

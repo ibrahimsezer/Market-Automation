@@ -85,10 +85,22 @@
     <Compile Include="Forms\FormReporting.Designer.cs">
       <DependentUpon>FormReporting.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FormSettings.cs">
+    <Compile Include="Settings\Change Password.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FormSettings.Designer.cs">
+    <Compile Include="Settings\Change Password.Designer.cs">
+      <DependentUpon>Change Password.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\Create an Account.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\Create an Account.Designer.cs">
+      <DependentUpon>Create an Account.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\FormSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\FormSettings.Designer.cs">
       <DependentUpon>FormSettings.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
@@ -105,6 +117,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings\List Users.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\List Users.Designer.cs">
+      <DependentUpon>List Users.cs</DependentUpon>
+    </Compile>
     <Compile Include="ThemeColor.cs" />
     <EmbeddedResource Include="Forms\FormCustomer.resx">
       <DependentUpon>FormCustomer.cs</DependentUpon>
@@ -121,7 +139,13 @@
     <EmbeddedResource Include="Forms\FormReporting.resx">
       <DependentUpon>FormReporting.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FormSettings.resx">
+    <EmbeddedResource Include="Settings\Change Password.resx">
+      <DependentUpon>Change Password.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\Create an Account.resx">
+      <DependentUpon>Create an Account.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\FormSettings.resx">
       <DependentUpon>FormSettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
@@ -139,6 +163,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Settings\List Users.resx">
+      <DependentUpon>List Users.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
