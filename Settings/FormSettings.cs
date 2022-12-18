@@ -7,9 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Market_Automation.Forms;
 
 namespace Market_Automation.Forms
 {
+
     public partial class FormSettings : Form
     {
         private Button currentButton;
@@ -57,7 +59,10 @@ namespace Market_Automation.Forms
             childForm.BringToFront();
             childForm.Show();
         }
-
+        public void getOpenChildForm(object sender,EventArgs e)
+        {
+            OpenChildForm(new Forms.FormSettings(), sender);
+        }
         private void btn_listUsers_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Settings.List_Users(), sender);
@@ -71,6 +76,18 @@ namespace Market_Automation.Forms
         private void btn_changePassword_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Settings.Change_Password(), sender);
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            FormSettings Setobj = new FormSettings();
+            MainMenu Mainobj = new MainMenu();
+            ActiveForm.Close();
+            
+            Mainobj.Show();
+            
+
+            
         }
     }
 }

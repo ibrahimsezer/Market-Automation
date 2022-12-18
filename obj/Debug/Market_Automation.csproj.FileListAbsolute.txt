@@ -84,3 +84,6 @@ D:\GITHUB\Market-Automation\obj\Debug\Market_Automation.pdb
 C:\Users\ensar\Documents\GitHub\Market-Automation\obj\Debug\Market_Automation.Settings.List_Users.resources
 C:\Users\ensar\Documents\GitHub\Market-Automation\obj\Debug\Market_Automation.Settings.Create_an_Account.resources
 C:\Users\ensar\Documents\GitHub\Market-Automation\obj\Debug\Market_Automation.Settings.Change_Password.resources
+D:\GITHUB\Market-Automation\obj\Debug\Market_Automation.Settings.Change_Password.resources
+D:\GITHUB\Market-Automation\obj\Debug\Market_Automation.Settings.Create_an_Account.resources
+D:\GITHUB\Market-Automation\obj\Debug\Market_Automation.Settings.List_Users.resources

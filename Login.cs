@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,7 +19,11 @@ namespace Market_Automation
         {
             InitializeComponent();
         }
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
 
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
         private void closebtn_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -79,9 +84,9 @@ namespace Market_Automation
                     }
                     else
                     {
-                        loginPage.panel2.BackColor = Color.Red;
+                        loginPage.panelRight.BackColor = Color.Red;
                         MessageBox.Show("You entered your information incorrectly.", "You Could Not Log in", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        loginPage.panel2.BackColor = Color.FromArgb(51, 51, 76);
+                        loginPage.panelRight.BackColor = Color.FromArgb(51, 51, 76);
                     }
                 }
                 catch (Exception error)
@@ -202,6 +207,19 @@ namespace Market_Automation
         private void closebtn_MouseLeave(object sender, EventArgs e)
         {
             closebtn.BackColor = Color.FromArgb(51, 51, 76);
+        }
+
+        private void panel5_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+ 
+        private void panelRightTop_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }

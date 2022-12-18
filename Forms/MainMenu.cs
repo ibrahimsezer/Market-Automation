@@ -27,12 +27,12 @@ namespace Market_Automation
             this.ControlBox = false;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
         }
+        //DRAG FORM
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-
         private extern static void ReleaseCapture();
-        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
 
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
 
         private void MainMenu_Load(object sender, EventArgs e)
@@ -101,7 +101,7 @@ namespace Market_Automation
             childForm.Show();
             lblTitle.Text = childForm.Text;
         }
-
+       
         private void btnProducts_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Forms.FormProduct(), sender);
@@ -135,6 +135,7 @@ namespace Market_Automation
         private void btnSettings_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Forms.FormSettings(), sender);
+            panelMenu.Hide();
 
         }
 
@@ -145,7 +146,11 @@ namespace Market_Automation
                 activeForm.Close();
             }
             Reset();
+            panelMenu.Visible = true;
         }
+
+        public void getbtnClose(object sender, EventArgs e) {
+            btnCloseChildForms_Click(sender,e); }
         private void Reset()
         {
             DisableButton();
@@ -154,6 +159,11 @@ namespace Market_Automation
             panelLogo.BackColor = Color.FromArgb(39,39,58);
             currentButton = null;
             btnCloseChildForms.Visible = false;
+        }
+       
+        public void getReset()
+        {
+            Reset();
         }
 
         private void panelDesktopPanel_Paint(object sender, PaintEventArgs e)
@@ -173,8 +183,7 @@ namespace Market_Automation
 
         private void panelTitleBar_MouseDown(object sender, MouseEventArgs e)
         {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
+      
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -200,6 +209,22 @@ namespace Market_Automation
         private void panelLogo_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void panelTitleBar_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panelTitleBar_DragOver(object sender, DragEventArgs e)
+        {
+
+        }
+
+        private void panelTitleBar_MouseDown_1(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }

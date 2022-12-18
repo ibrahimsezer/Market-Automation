@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Market_Automation.Settings;
 namespace Market_Automation.Settings
 {
     public partial class List_Users : Form
@@ -107,6 +107,17 @@ namespace Market_Automation.Settings
         private void listMembers_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             ID = Convert.ToInt32(listUsers.Rows[e.RowIndex].Cells[0].Value.ToString());
+        }
+
+        private void listUsers_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            listUsers.ForeColor = Color.FromArgb(51, 51, 76);
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            
+          
         }
     }
 }
