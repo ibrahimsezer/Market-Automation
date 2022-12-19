@@ -46,6 +46,7 @@ namespace Market_Automation.Forms
             this.panelDesktopPanel.Name = "panelDesktopPanel";
             this.panelDesktopPanel.Size = new System.Drawing.Size(865, 727);
             this.panelDesktopPanel.TabIndex = 5;
+            this.panelDesktopPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDesktopPanel_Paint);
             // 
             // panelMenu
             // 

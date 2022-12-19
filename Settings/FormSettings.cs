@@ -58,6 +58,7 @@ namespace Market_Automation.Forms
             this.panelDesktopPanel.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
+
         }
         public void getOpenChildForm(object sender,EventArgs e)
         {
@@ -78,13 +79,9 @@ namespace Market_Automation.Forms
             OpenChildForm(new Settings.Change_Password(), sender);
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
+        private void panelDesktopPanel_Paint(object sender, PaintEventArgs e)
         {
-            FormSettings Setobj = new FormSettings();
-            MainMenu Mainobj = new MainMenu();
-            ActiveForm.Close();
-            
-            Mainobj.Show();  
+
         }
     }
 }

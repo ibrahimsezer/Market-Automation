@@ -16,5 +16,10 @@ namespace Market_Automation.Product_Section
         {
             InitializeComponent();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

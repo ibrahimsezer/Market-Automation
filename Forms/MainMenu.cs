@@ -101,7 +101,7 @@ namespace Market_Automation
             childForm.Show();
             lblTitle.Text = childForm.Text;
         }
-      
+
         private void btnProducts_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Forms.FormProduct(), sender);
@@ -131,12 +131,10 @@ namespace Market_Automation
             OpenChildForm(new Forms.FormNotifications(), sender);
 
         }
-
-        private void btnSettings_Click(object sender, EventArgs e)
+        private void btnSettings_Click_1(object sender, EventArgs e)
         {
             OpenChildForm(new Forms.FormSettings(), sender);
-            
-
+            lblTitle.Text ="FormSettings";
         }
 
         private void btnCloseChildForms_Click(object sender, EventArgs e)
@@ -230,5 +228,12 @@ namespace Market_Automation
         {
 
         }
+
+        private void lblTitle_Click(object sender, EventArgs e)
+        {
+
+        }
+
+      
     }
 }
