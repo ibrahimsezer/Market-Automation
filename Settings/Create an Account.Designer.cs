@@ -74,7 +74,7 @@
             "Admin",
             "Customer"});
             this.comboBox1.Location = new System.Drawing.Point(447, 182);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(185, 29);
             this.comboBox1.TabIndex = 55;
@@ -86,7 +86,7 @@
             this.btnFemale.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnFemale.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.btnFemale.Location = new System.Drawing.Point(564, 530);
-            this.btnFemale.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnFemale.Margin = new System.Windows.Forms.Padding(4);
             this.btnFemale.Name = "btnFemale";
             this.btnFemale.Size = new System.Drawing.Size(104, 27);
             this.btnFemale.TabIndex = 54;
@@ -101,7 +101,7 @@
             this.btnMale.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnMale.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.btnMale.Location = new System.Drawing.Point(468, 530);
-            this.btnMale.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMale.Margin = new System.Windows.Forms.Padding(4);
             this.btnMale.Name = "btnMale";
             this.btnMale.Size = new System.Drawing.Size(79, 27);
             this.btnMale.TabIndex = 53;
@@ -129,7 +129,7 @@
             this.txtCity.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtCity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.txtCity.Location = new System.Drawing.Point(779, 468);
-            this.txtCity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCity.Margin = new System.Windows.Forms.Padding(4);
             this.txtCity.Name = "txtCity";
             this.txtCity.Size = new System.Drawing.Size(184, 32);
             this.txtCity.TabIndex = 52;
@@ -154,7 +154,7 @@
             this.txtFathername.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtFathername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.txtFathername.Location = new System.Drawing.Point(779, 327);
-            this.txtFathername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtFathername.Margin = new System.Windows.Forms.Padding(4);
             this.txtFathername.Name = "txtFathername";
             this.txtFathername.Size = new System.Drawing.Size(184, 32);
             this.txtFathername.TabIndex = 51;
@@ -179,7 +179,7 @@
             this.txtMothername.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtMothername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.txtMothername.Location = new System.Drawing.Point(779, 278);
-            this.txtMothername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMothername.Margin = new System.Windows.Forms.Padding(4);
             this.txtMothername.Name = "txtMothername";
             this.txtMothername.Size = new System.Drawing.Size(184, 32);
             this.txtMothername.TabIndex = 50;
@@ -191,7 +191,7 @@
             this.txtUsername.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.txtUsername.Location = new System.Drawing.Point(449, 85);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(184, 32);
             this.txtUsername.TabIndex = 40;
@@ -202,7 +202,7 @@
             this.txtBirthdate.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBirthdate.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtBirthdate.Location = new System.Drawing.Point(779, 229);
-            this.txtBirthdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBirthdate.Margin = new System.Windows.Forms.Padding(4);
             this.txtBirthdate.Mask = "0000/00/00";
             this.txtBirthdate.Name = "txtBirthdate";
             this.txtBirthdate.Size = new System.Drawing.Size(184, 25);
@@ -216,7 +216,7 @@
             this.txtPassword.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.txtPassword.Location = new System.Drawing.Point(449, 133);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(184, 32);
             this.txtPassword.TabIndex = 41;
@@ -228,7 +228,7 @@
             this.txtSurname.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtSurname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.txtSurname.Location = new System.Drawing.Point(780, 182);
-            this.txtSurname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSurname.Margin = new System.Windows.Forms.Padding(4);
             this.txtSurname.Name = "txtSurname";
             this.txtSurname.Size = new System.Drawing.Size(184, 32);
             this.txtSurname.TabIndex = 48;
@@ -240,7 +240,7 @@
             this.txtName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.txtName.Location = new System.Drawing.Point(781, 133);
-            this.txtName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4);
             this.txtName.MaxLength = 50;
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(183, 32);
@@ -253,7 +253,7 @@
             this.txtIdentity.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtIdentity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.txtIdentity.Location = new System.Drawing.Point(781, 85);
-            this.txtIdentity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtIdentity.Margin = new System.Windows.Forms.Padding(4);
             this.txtIdentity.Mask = "00000000000";
             this.txtIdentity.Name = "txtIdentity";
             this.txtIdentity.Size = new System.Drawing.Size(183, 25);
@@ -266,7 +266,7 @@
             this.txtEmail.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.txtEmail.Location = new System.Drawing.Point(779, 425);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(184, 32);
             this.txtEmail.TabIndex = 45;
@@ -277,7 +277,7 @@
             this.txtPhone.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPhone.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtPhone.Location = new System.Drawing.Point(779, 375);
-            this.txtPhone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPhone.Margin = new System.Windows.Forms.Padding(4);
             this.txtPhone.Mask = "(999) 000-0000";
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(184, 25);
@@ -408,12 +408,12 @@
             this.btnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.btnClear.FlatAppearance.BorderSize = 0;
             this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClear.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnClear.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnClear.ForeColor = System.Drawing.Color.White;
-            this.btnClear.Location = new System.Drawing.Point(29, 102);
-            this.btnClear.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnClear.Location = new System.Drawing.Point(4, 102);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(4);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(213, 43);
+            this.btnClear.Size = new System.Drawing.Size(210, 40);
             this.btnClear.TabIndex = 16;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = false;
@@ -424,12 +424,12 @@
             this.btnCreateAccount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.btnCreateAccount.FlatAppearance.BorderSize = 0;
             this.btnCreateAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCreateAccount.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnCreateAccount.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnCreateAccount.ForeColor = System.Drawing.Color.White;
-            this.btnCreateAccount.Location = new System.Drawing.Point(16, 52);
-            this.btnCreateAccount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCreateAccount.Location = new System.Drawing.Point(6, 54);
+            this.btnCreateAccount.Margin = new System.Windows.Forms.Padding(4);
             this.btnCreateAccount.Name = "btnCreateAccount";
-            this.btnCreateAccount.Size = new System.Drawing.Size(245, 43);
+            this.btnCreateAccount.Size = new System.Drawing.Size(210, 40);
             this.btnCreateAccount.TabIndex = 15;
             this.btnCreateAccount.Text = "Create an Account";
             this.btnCreateAccount.UseVisualStyleBackColor = false;
@@ -442,9 +442,9 @@
             this.panel1.Controls.Add(this.btnCreateAccount);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(299, 587);
+            this.panel1.Size = new System.Drawing.Size(220, 587);
             this.panel1.TabIndex = 6;
             // 
             // panel2
@@ -478,7 +478,7 @@
             this.panel2.Controls.Add(this.label4);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1077, 587);
             this.panel2.TabIndex = 7;
@@ -490,7 +490,7 @@
             this.ClientSize = new System.Drawing.Size(1077, 587);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Create_an_Account";
             this.Text = "Create an Account";
             this.panel1.ResumeLayout(false);

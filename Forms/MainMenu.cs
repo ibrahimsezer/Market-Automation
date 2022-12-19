@@ -72,7 +72,7 @@ namespace Market_Automation
                 }
             }
         }
-
+        
         private void DisableButton()
         {
             foreach(Control previousBtn in panelMenu.Controls)
@@ -101,7 +101,7 @@ namespace Market_Automation
             childForm.Show();
             lblTitle.Text = childForm.Text;
         }
-       
+      
         private void btnProducts_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Forms.FormProduct(), sender);
@@ -135,7 +135,7 @@ namespace Market_Automation
         private void btnSettings_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Forms.FormSettings(), sender);
-            panelMenu.Hide();
+            
 
         }
 
@@ -149,8 +149,7 @@ namespace Market_Automation
             panelMenu.Visible = true;
         }
 
-        public void getbtnClose(object sender, EventArgs e) {
-            btnCloseChildForms_Click(sender,e); }
+        
         private void Reset()
         {
             DisableButton();
@@ -225,6 +224,11 @@ namespace Market_Automation
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void panelMenu_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -32,7 +32,6 @@ namespace Market_Automation.Forms
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormSettings));
             this.panelDesktopPanel = new System.Windows.Forms.Panel();
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.btnBack = new System.Windows.Forms.Button();
             this.btn_changePassword = new System.Windows.Forms.Button();
             this.btn_createAccount = new System.Windows.Forms.Button();
             this.btn_listUsers = new System.Windows.Forms.Button();
@@ -51,7 +50,6 @@ namespace Market_Automation.Forms
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.panelMenu.Controls.Add(this.btnBack);
             this.panelMenu.Controls.Add(this.btn_changePassword);
             this.panelMenu.Controls.Add(this.btn_createAccount);
             this.panelMenu.Controls.Add(this.btn_listUsers);
@@ -61,26 +59,6 @@ namespace Market_Automation.Forms
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(220, 727);
             this.panelMenu.TabIndex = 3;
-            // 
-            // btnBack
-            // 
-            this.btnBack.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnBack.FlatAppearance.BorderSize = 0;
-            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnBack.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnBack.Image = ((System.Drawing.Image)(resources.GetObject("btnBack.Image")));
-            this.btnBack.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBack.Location = new System.Drawing.Point(0, 180);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.btnBack.Size = new System.Drawing.Size(220, 60);
-            this.btnBack.TabIndex = 3;
-            this.btnBack.Text = "Back";
-            this.btnBack.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btn_changePassword
             // 
@@ -167,6 +145,5 @@ namespace Market_Automation.Forms
         private System.Windows.Forms.Button btn_listUsers;
         private System.Windows.Forms.Panel panelDesktopPanel;
         private System.Windows.Forms.Panel panelMenu;
-        private System.Windows.Forms.Button btnBack;
     }
 }

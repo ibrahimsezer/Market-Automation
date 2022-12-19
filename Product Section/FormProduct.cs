@@ -7,18 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Market_Automation.Forms;
 namespace Market_Automation.Forms
 {
     public partial class FormProduct : Form
     {
+        MainMenu mainobj = new MainMenu();
+
         private Button currentButton;
         private Random random;
         private int tempIndex;
         private Form activeForm;
-
         public FormProduct()
         {
+
             InitializeComponent();
         }
         private void LoadTheme()
@@ -47,6 +49,9 @@ namespace Market_Automation.Forms
             this.panelDesktopPanel.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
+        
+
+
         }
         private void FormProduct_Load(object sender, EventArgs e)
         {
@@ -64,6 +69,7 @@ namespace Market_Automation.Forms
         private void btn_Product_Introduction_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Product_Section.Product_Introduction(), sender);
+            
         }
 
         private void btn_Sale_Click(object sender, EventArgs e)

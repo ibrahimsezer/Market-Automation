@@ -154,9 +154,6 @@
     <EmbeddedResource Include="Product Section\Product Introduction.resx">
       <DependentUpon>Product Introduction.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Product Section\Sale.resx">
-      <DependentUpon>Sale.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Settings\Change Password.resx">
       <DependentUpon>Change Password.cs</DependentUpon>
     </EmbeddedResource>
