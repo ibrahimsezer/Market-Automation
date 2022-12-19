@@ -21,5 +21,10 @@ namespace Market_Automation.Product_Section
         {
 
         }
+
+        private void btn7_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
