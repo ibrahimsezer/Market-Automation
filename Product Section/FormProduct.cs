@@ -7,26 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Market_Automation.Forms;
 
 namespace Market_Automation.Forms
 {
-
-    public partial class FormSettings : Form
+    public partial class FormProduct : Form
     {
         private Button currentButton;
         private Random random;
         private int tempIndex;
         private Form activeForm;
 
-
-        public FormSettings()
+        public FormProduct()
         {
             InitializeComponent();
-            random = new Random();
-            this.Text = string.Empty;
-            this.ControlBox = false;
-            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
         }
         private void LoadTheme()
         {
@@ -40,10 +33,6 @@ namespace Market_Automation.Forms
                     btn.FlatAppearance.BorderColor = ThemeColor.SecondaryColor;
                 }
             }
-        }
-        private void FormSettings_Load(object sender, EventArgs e)
-        {
-            LoadTheme();
         }
 
         private void OpenChildForm(Form childForm, object btnSender)
@@ -59,32 +48,36 @@ namespace Market_Automation.Forms
             childForm.BringToFront();
             childForm.Show();
         }
-        public void getOpenChildForm(object sender,EventArgs e)
+        private void FormProduct_Load(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.FormSettings(), sender);
-        }
-        private void btn_listUsers_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new Settings.List_Users(), sender);
+            try
+            {
+                LoadTheme();
+                
+            }
+            catch (Exception error )
+            {
+                MessageBox.Show("Error: " + error.Message);
+            }
         }
 
-        private void btn_createAccount_Click(object sender, EventArgs e)
+        private void btn_Product_Introduction_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Settings.Create_an_Account(), sender);
+            OpenChildForm(new Product_Section.Product_Introduction(), sender);
         }
 
-        private void btn_changePassword_Click(object sender, EventArgs e)
+        private void btn_Sale_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Settings.Change_Password(), sender);
+            OpenChildForm(new Product_Section.Sale(), sender);
         }
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            FormSettings Setobj = new FormSettings();
+            FormProduct Setobj = new FormProduct();
             MainMenu Mainobj = new MainMenu();
             ActiveForm.Close();
-            
-            Mainobj.Show();  
+
+            Mainobj.Show();
         }
     }
 }
