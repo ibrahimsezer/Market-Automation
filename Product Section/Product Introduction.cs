@@ -88,10 +88,20 @@ namespace Market_Automation.Product_Section
 
         private void Product_Introduction_Load(object sender, EventArgs e)
         {
+            //columnsHeader();
             fillProducts();
             fillCategory();
             Control();
         }
+
+        /*private void columnsHeader()
+        {
+            dataGridView_Products.Columns[0].HeaderText = "Product ID";
+            dataGridView_Products.Columns[1].HeaderText = "Product Name";
+            dataGridView_Products.Columns[2].HeaderText = "Unit Price";
+            dataGridView_Products.Columns[3].HeaderText = "Kilogram (kg) Price";
+            dataGridView_Products.Columns[4].HeaderText = "Category";
+        }*/
 
         private void insert_productsTB()
         {
@@ -396,6 +406,66 @@ namespace Market_Automation.Product_Section
             product_UnitPrice.Clear();
             product_KgPrice.Clear();
             searchProduct.Clear();
+        }
+
+        private void btnDelete_MouseHover(object sender, EventArgs e)
+        {
+            btnDelete.BackColor = Color.FromArgb(255, 99, 71);
+        }
+
+        private void btnDelete_MouseLeave(object sender, EventArgs e)
+        {
+            btnDelete.BackColor = DefaultBackColor;
+        }
+
+        private void btnAdd_MouseHover(object sender, EventArgs e)
+        {
+            btnAdd.BackColor = Color.FromArgb(30, 144, 255);
+        }
+
+        private void btnAdd_MouseLeave(object sender, EventArgs e)
+        {
+            btnAdd.BackColor = DefaultBackColor;
+        }
+
+        private void btnUpdate_MouseHover(object sender, EventArgs e)
+        {
+            btnUpdate.BackColor = Color.FromArgb(255, 99, 71);
+        }
+
+        private void btnUpdate_MouseLeave(object sender, EventArgs e)
+        {
+            btnUpdate.BackColor = DefaultBackColor;
+        }
+
+        private void btnRefresh_MouseHover(object sender, EventArgs e)
+        {
+            btnRefresh.BackColor = Color.FromArgb(238, 232, 170);
+        }
+
+        private void btnRefresh_MouseLeave(object sender, EventArgs e)
+        {
+            btnRefresh.BackColor = DefaultBackColor;
+        }
+
+        private void btnReport_MouseHover(object sender, EventArgs e)
+        {
+            btnReport.BackColor = Color.FromArgb(255, 235, 205);
+        }
+
+        private void btnReport_MouseLeave(object sender, EventArgs e)
+        {
+            btnReport.BackColor = DefaultBackColor;
+        }
+
+        private void btnClear_MouseHover(object sender, EventArgs e)
+        {
+            btnClear.BackColor = Color.FromArgb(250, 235, 215);
+        }
+
+        private void btnClear_MouseLeave(object sender, EventArgs e)
+        {
+            btnClear.BackColor = DefaultBackColor;
         }
     }
 }

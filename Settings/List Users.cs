@@ -25,6 +25,26 @@ namespace Market_Automation.Settings
         private void List_Users_Load(object sender, EventArgs e)
         {
             getRecords();
+            columnsHeader();  
+        }
+        private void columnsHeader()
+        {
+            listUsers.Columns[0].HeaderText = "User ID";
+            listUsers.Columns[1].HeaderText = "User Name";
+            listUsers.Columns[2].HeaderText = "Password";
+            listUsers.Columns[3].HeaderText = "Authority";
+            listUsers.Columns[4].HeaderText = "User Information ID";
+            listUsers.Columns[5].HeaderText = "User ID";
+            listUsers.Columns[6].HeaderText = "Identity";
+            listUsers.Columns[7].HeaderText = "Real Name";
+            listUsers.Columns[8].HeaderText = "Surname";
+            listUsers.Columns[9].HeaderText = "Birthdate";
+            listUsers.Columns[10].HeaderText = "Mother Name";
+            listUsers.Columns[11].HeaderText = "Father Name";
+            listUsers.Columns[12].HeaderText = "Phone Number";
+            listUsers.Columns[13].HeaderText = "Email";
+            listUsers.Columns[14].HeaderText = "City";
+            listUsers.Columns[15].HeaderText = "Gender";
         }
 
         private void closebtn_Click(object sender, EventArgs e)
@@ -116,8 +136,38 @@ namespace Market_Automation.Settings
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-            
+            getRecords();
           
+        }
+
+        private void btnSearch_MouseHover(object sender, EventArgs e)
+        {
+            btnSearch.BackColor = Color.FromArgb(0, 191, 255);
+        }
+
+        private void btnSearch_MouseLeave(object sender, EventArgs e)
+        {
+            btnSearch.BackColor = Color.FromArgb(51, 51, 76);
+        }
+
+        private void btnRefresh_MouseHover(object sender, EventArgs e)
+        {
+            btnRefresh.BackColor = Color.FromArgb(0, 191, 255);
+        }
+
+        private void btnRefresh_MouseLeave(object sender, EventArgs e)
+        {
+            btnRefresh.BackColor = Color.FromArgb(51, 51, 76);
+        }
+
+        private void deleteAccount_btn_MouseHover(object sender, EventArgs e)
+        {
+            deleteAccount_btn.BackColor = Color.FromArgb(178, 34, 34);
+        }
+
+        private void deleteAccount_btn_MouseLeave(object sender, EventArgs e)
+        {
+            deleteAccount_btn.BackColor = Color.FromArgb(51, 51, 76);
         }
     }
 }
