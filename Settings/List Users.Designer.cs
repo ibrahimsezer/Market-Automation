@@ -58,7 +58,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(165, 526);
+            this.panel1.Size = new System.Drawing.Size(183, 526);
             this.panel1.TabIndex = 4;
             // 
             // gboxBtn
@@ -68,10 +68,10 @@
             this.gboxBtn.Controls.Add(this.deleteAccount_btn);
             this.gboxBtn.Dock = System.Windows.Forms.DockStyle.Top;
             this.gboxBtn.Location = new System.Drawing.Point(0, 89);
-            this.gboxBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gboxBtn.Margin = new System.Windows.Forms.Padding(2);
             this.gboxBtn.Name = "gboxBtn";
-            this.gboxBtn.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.gboxBtn.Size = new System.Drawing.Size(165, 149);
+            this.gboxBtn.Padding = new System.Windows.Forms.Padding(2);
+            this.gboxBtn.Size = new System.Drawing.Size(183, 149);
             this.gboxBtn.TabIndex = 23;
             this.gboxBtn.TabStop = false;
             // 
@@ -82,13 +82,15 @@
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnSearch.ForeColor = System.Drawing.Color.White;
-            this.btnSearch.Location = new System.Drawing.Point(3, 9);
+            this.btnSearch.Location = new System.Drawing.Point(9, 10);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(156, 35);
             this.btnSearch.TabIndex = 18;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            this.btnSearch.MouseLeave += new System.EventHandler(this.btnSearch_MouseLeave);
+            this.btnSearch.MouseHover += new System.EventHandler(this.btnSearch_MouseHover);
             // 
             // btnRefresh
             // 
@@ -97,28 +99,32 @@
             this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRefresh.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnRefresh.ForeColor = System.Drawing.Color.White;
-            this.btnRefresh.Location = new System.Drawing.Point(2, 50);
+            this.btnRefresh.Location = new System.Drawing.Point(8, 51);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(157, 35);
             this.btnRefresh.TabIndex = 21;
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = false;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            this.btnRefresh.MouseLeave += new System.EventHandler(this.btnRefresh_MouseLeave);
+            this.btnRefresh.MouseHover += new System.EventHandler(this.btnRefresh_MouseHover);
             // 
             // deleteAccount_btn
             // 
             this.deleteAccount_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.deleteAccount_btn.FlatAppearance.BorderSize = 0;
             this.deleteAccount_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.deleteAccount_btn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.deleteAccount_btn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.deleteAccount_btn.ForeColor = System.Drawing.Color.White;
-            this.deleteAccount_btn.Location = new System.Drawing.Point(2, 92);
+            this.deleteAccount_btn.Location = new System.Drawing.Point(4, 92);
             this.deleteAccount_btn.Name = "deleteAccount_btn";
-            this.deleteAccount_btn.Size = new System.Drawing.Size(157, 35);
+            this.deleteAccount_btn.Size = new System.Drawing.Size(176, 35);
             this.deleteAccount_btn.TabIndex = 17;
             this.deleteAccount_btn.Text = "Delete an Account";
             this.deleteAccount_btn.UseVisualStyleBackColor = false;
             this.deleteAccount_btn.Click += new System.EventHandler(this.deleteAccount_btn_Click);
+            this.deleteAccount_btn.MouseLeave += new System.EventHandler(this.deleteAccount_btn_MouseLeave);
+            this.deleteAccount_btn.MouseHover += new System.EventHandler(this.deleteAccount_btn_MouseHover);
             // 
             // gboxID
             // 
@@ -126,29 +132,31 @@
             this.gboxID.Controls.Add(this.label1);
             this.gboxID.Dock = System.Windows.Forms.DockStyle.Top;
             this.gboxID.Location = new System.Drawing.Point(0, 0);
-            this.gboxID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gboxID.Margin = new System.Windows.Forms.Padding(2);
             this.gboxID.Name = "gboxID";
-            this.gboxID.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.gboxID.Size = new System.Drawing.Size(165, 89);
+            this.gboxID.Padding = new System.Windows.Forms.Padding(2);
+            this.gboxID.Size = new System.Drawing.Size(183, 89);
             this.gboxID.TabIndex = 22;
             this.gboxID.TabStop = false;
             // 
             // txtID
             // 
+            this.txtID.BackColor = System.Drawing.SystemColors.Control;
             this.txtID.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtID.Location = new System.Drawing.Point(2, 41);
+            this.txtID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.txtID.Location = new System.Drawing.Point(4, 39);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(154, 27);
+            this.txtID.Size = new System.Drawing.Size(163, 27);
             this.txtID.TabIndex = 19;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(2, 20);
+            this.label1.Location = new System.Drawing.Point(3, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 17);
+            this.label1.Size = new System.Drawing.Size(111, 21);
             this.label1.TabIndex = 20;
             this.label1.Text = "Customer ID:";
             // 
@@ -196,7 +204,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.listUsers.DefaultCellStyle = dataGridViewCellStyle3;
             this.listUsers.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.listUsers.Location = new System.Drawing.Point(171, 11);
+            this.listUsers.Location = new System.Drawing.Point(186, 3);
             this.listUsers.Name = "listUsers";
             this.listUsers.ReadOnly = true;
             this.listUsers.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -221,7 +229,7 @@
             this.listUsers.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.listUsers.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             this.listUsers.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.SystemColors.Control;
-            this.listUsers.Size = new System.Drawing.Size(1238, 504);
+            this.listUsers.Size = new System.Drawing.Size(1223, 520);
             this.listUsers.TabIndex = 28;
             this.listUsers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.listUsers_CellContentClick);
             this.listUsers.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.listMembers_RowHeaderMouseClick);

@@ -104,5 +104,25 @@ namespace Market_Automation.Settings
                 MessageBox.Show("An Error Occurred During The Operation: " + error.Message);
             }
         }
+
+        private void btnClear_MouseHover(object sender, EventArgs e)
+        {
+            btnClear.BackColor = Color.FromArgb(178, 34, 34);
+        }
+
+        private void btnClear_MouseLeave(object sender, EventArgs e)
+        {
+            btnClear.BackColor = Color.FromArgb(51, 51, 76);
+        }
+
+        private void btnCreateAccount_MouseHover(object sender, EventArgs e)
+        {
+            btnCreateAccount.BackColor = Color.FromArgb(0, 191, 255);
+        }
+
+        private void btnCreateAccount_MouseLeave(object sender, EventArgs e)
+        {
+            btnCreateAccount.BackColor= Color.FromArgb(51, 51, 76);
+        }
     }
 }

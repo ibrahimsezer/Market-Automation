@@ -72,5 +72,16 @@ namespace Market_Automation.Settings
             con.Open();
             pullData();     
         }
+
+        private void changePassword_MouseHover(object sender, EventArgs e)
+        {
+            changePassword.BackColor = Color.FromArgb(178, 34, 34);
+        }
+
+        private void changePassword_MouseLeave(object sender, EventArgs e)
+        {
+            changePassword.BackColor = Color.FromArgb(51, 51, 76);
+
+        }
     }
 }
