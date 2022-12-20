@@ -64,6 +64,7 @@
             this.selectUser.Name = "selectUser";
             this.selectUser.Size = new System.Drawing.Size(144, 29);
             this.selectUser.TabIndex = 65;
+            this.selectUser.SelectedIndexChanged += new System.EventHandler(this.selectUser_SelectedIndexChanged);
             // 
             // label4
             // 

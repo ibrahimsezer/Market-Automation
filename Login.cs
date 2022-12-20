@@ -19,6 +19,7 @@ namespace Market_Automation
         {
             InitializeComponent();
         }
+
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
 
@@ -28,6 +29,10 @@ namespace Market_Automation
         {
             Application.Exit();
         }
+
+        SqlConnection con = new SqlConnection(@"Data source=.;initial catalog=marketDB; integrated Security=True");
+        SqlCommand cmd;
+        SqlDataReader dr;
 
         private void txtUsername_Click(object sender, EventArgs e)
         {
@@ -55,56 +60,58 @@ namespace Market_Automation
             txtPassword.UseSystemPasswordChar = true;
         }
 
-        internal class loginClass
+        public void pullData()
         {
-            SqlConnection con = new SqlConnection(@"Data source=.;initial catalog=marketDB; integrated Security=True");
-            SqlCommand cmd;
-            SqlDataReader dr;
-            public void loginActivity(string username, string password, Login loginPage)
-            {
-                try
-                {
-                    cmd = new SqlCommand("Select * From userTB where userName='" + username + "' and userPassword='" + password + "'", con);
-                    con.Open();
-                    dr = cmd.ExecuteReader();
-                    if (dr.Read())
-                    {
-                        dr.Close();
-                        string condition = "SELECT * FROM userTB WHERE EXISTS(SELECT * FROM userTB WHERE userAuthority = 'Admin')";
-                        cmd = new SqlCommand(condition, con);
-                        dr = cmd.ExecuteReader();
-                        if (dr.Read())
-                        {
-                            MessageBox.Show("You have successfully logged in", "Informing", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            loginClass lc = new loginClass();
+            con.Open();
+            SqlCommand cmd = new SqlCommand("Select userAuthority From userTB", con);
 
-                            Login login = new Login();
-                            login.Hide();
-                            MainMenu mm = new MainMenu();
-                            mm.Show();
-                        }  
-                    }
-                    else
-                    {
-                        loginPage.panelRight.BackColor = Color.Red;
-                        MessageBox.Show("You entered your information incorrectly.", "You Could Not Log in", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        loginPage.panelRight.BackColor = Color.FromArgb(51, 51, 76);
-                    }
-                }
-                catch (Exception error)
-                {
-                    MessageBox.Show("Error: " + error.Message);
-                }
-                con.Close();
-                cmd.Dispose();
+            SqlDataReader dr = cmd.ExecuteReader();
+
+            while (dr.Read())
+            {
+                authorityCombobox.Items.Add(dr[0]).ToString();
             }
+            dr.Close();
+            con.Close();
         }
+
+
+        public void loginActivity(string username, string password)
+        {
+            try
+            {
+                Login login = new Login();
+                cmd = new SqlCommand("Select userName,userPassword,userAuthority From userTB where userName='" + username + "' and userPassword='" + password + "' and userAuthority='" + authorityCombobox.Text + "'", con);
+                con.Open();
+                dr = cmd.ExecuteReader();
+                if (dr.Read())
+                {   
+                    MessageBox.Show("You have successfully logged in as " + authorityCombobox.Text, "Informing", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    dr.Close();
+                    login.Hide();
+                    MainMenu mm = new MainMenu();
+                    mm.Show();
+                }
+                else
+                {
+                    panelRight.BackColor = Color.Red;
+                    MessageBox.Show("You entered your information incorrectly.", "You Could Not Log in", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    panelRight.BackColor = Color.FromArgb(51, 51, 76);
+                }
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Error: " + error.Message);
+            }
+            con.Close();
+            cmd.Dispose();
+        }
+        
         private void loginbtn_Click(object sender, EventArgs e)
         {
             string username = txtUsername.Text;
             string password = txtPassword.Text;
-            loginClass getLogin = new loginClass();
-            getLogin.loginActivity(username, password, this);
+            loginActivity(username,password);
         }
 
         private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
@@ -113,8 +120,7 @@ namespace Market_Automation
             {
                 string username = txtUsername.Text;
                 string password = txtPassword.Text;
-                loginClass getLogin = new loginClass();
-                getLogin.loginActivity(username, password, this);
+                loginActivity(username,password);
             }
         }
 
@@ -196,11 +202,6 @@ namespace Market_Automation
 
         }
 
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
         private void closebtn_MouseHover(object sender, EventArgs e)
         {
             closebtn.BackColor = Color.Red;
@@ -222,6 +223,11 @@ namespace Market_Automation
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+            pullData();
         }
     }
 }

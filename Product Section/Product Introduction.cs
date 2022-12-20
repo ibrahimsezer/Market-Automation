@@ -178,11 +178,11 @@ namespace Market_Automation.Product_Section
         {
             try
             {
-                categoryID();
+                //categoryID();
                 cmd = new SqlCommand();
                 con.Open();
                 cmd.Connection = con;
-                cmd.CommandText = "update productsTB set productName='" + productName.Text + "',product_UnitPrice='" + product_UnitPrice.Text + "',product_KgPrice='" + product_KgPrice.Text + "',categoryName='" + comboBox1.Text;
+                cmd.CommandText = "update productsTB set productsName='" + productName.Text + "',product_UnitPrice='" + product_UnitPrice.Text + "',product_KgPrice='" + product_KgPrice.Text + "',categoryName='" + comboBox1.Text + "'";
                 cmd.ExecuteNonQuery();
                 con.Close();
                 fillProducts();
