@@ -44,7 +44,7 @@ namespace Market_Automation.Product_Section
         void fillProducts()
         {
             con = new SqlConnection(@"Data source=.; initial catalog=marketDB; integrated Security=True");
-            da = new SqlDataAdapter("select *from productsTB", con);
+            da = new SqlDataAdapter("select productsID as 'ID', productsName as 'Product Name', product_UnitPrice as 'Unit Price', product_KgPrice as 'Kilogram Price', categoryName as 'Category' from productsTB", con);
             ds = new DataSet();
             con.Open();
             da.Fill(ds, "productsTB");
@@ -344,13 +344,6 @@ namespace Market_Automation.Product_Section
             }
         }
 
-        private void btnReport_Click(object sender, EventArgs e)
-        {
-            PrintPreviewDialog preview = new PrintPreviewDialog();
-            preview.Document = printDocument1;
-            preview.ShowDialog();
-        }
-
         private void product_UnitPrice_KeyPress(object sender, KeyPressEventArgs e)
         {
             if ((int)e.KeyChar >= 48 && (int)e.KeyChar <= 57)
@@ -466,6 +459,13 @@ namespace Market_Automation.Product_Section
         private void btnClear_MouseLeave(object sender, EventArgs e)
         {
             btnClear.BackColor = DefaultBackColor;
+        }
+
+        private void btnReport_Click(object sender, EventArgs e)
+        {
+            PrintPreviewDialog preview = new PrintPreviewDialog();
+            preview.Document = printDocument1;
+            preview.ShowDialog();
         }
     }
 }

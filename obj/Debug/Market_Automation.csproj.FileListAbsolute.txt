@@ -90,3 +90,4 @@ D:\GITHUB\Market-Automation\obj\Debug\Market_Automation.Settings.List_Users.reso
 C:\Users\ensar\Documents\GitHub\Market-Automation\obj\Debug\Market_Automation.Product_Section.Product_Introduction.resources
 D:\GITHUB\Market-Automation\obj\Debug\Market_Automation.Product_Section.Product_Introduction.resources
 D:\GITHUB\Market-Automation\obj\Debug\Market_Automation.Product_Section.Sale.resources
+C:\Users\ensar\Documents\GitHub\Market-Automation\obj\Debug\Market_Automation.Product_Section.Sale.resources

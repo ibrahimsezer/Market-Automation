@@ -136,6 +136,7 @@ namespace Market_Automation.Settings
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
+            txtID.Text = "";
             getRecords();
           
         }

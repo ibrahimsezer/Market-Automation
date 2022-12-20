@@ -76,6 +76,8 @@ namespace Market_Automation
                         if (dr.Read())
                         {
                             MessageBox.Show("You have successfully logged in", "Informing", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            loginClass lc = new loginClass();
+
                             Login login = new Login();
                             login.Hide();
                             MainMenu mm = new MainMenu();
