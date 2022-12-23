@@ -44,7 +44,7 @@ namespace Market_Automation.Product_Section
         void fillProducts()
         {
             con = new SqlConnection(@"Data source=.; initial catalog=marketDB; integrated Security=True");
-            da = new SqlDataAdapter("select productsID as 'ID', productsName as 'Product Name', product_UnitPrice as 'Unit Price', product_KgPrice as 'Kilogram Price', categoryName as 'Category' from productsTB", con);
+            da = new SqlDataAdapter("select productsID as 'ID', productsName as 'Product Name', product_UnitPrice as 'Unit Price', product_KgPrice as 'Kilogram Price', categoryName as 'Category', productUnitCount as 'Total', productKgCount as 'Kg Total' from productsTB", con);
             ds = new DataSet();
             con.Open();
             da.Fill(ds, "productsTB");
@@ -108,7 +108,7 @@ namespace Market_Automation.Product_Section
             cmd = new SqlCommand();
             con.Open();
             cmd.Connection = con;
-            cmd.CommandText = "insert into productsTB (productsName,product_UnitPrice,product_KgPrice,categoryName) values ('" + productName.Text + "','" + product_UnitPrice.Text + "','" + product_KgPrice.Text + "','" + comboBox1.Text + "')";
+            cmd.CommandText = "insert into productsTB (productsName,product_UnitPrice,product_KgPrice,categoryName,productUnitCount,productKgCount) values ('" + productName.Text + "','" + product_UnitPrice.Text + "','" + product_KgPrice.Text + "','" + comboBox1.Text + "','" + txtUnitTotal.Text + "','" + txtKgTotal.Text + "')";
             cmd.ExecuteNonQuery();
             con.Close();
         }
@@ -182,7 +182,7 @@ namespace Market_Automation.Product_Section
                 cmd = new SqlCommand();
                 con.Open();
                 cmd.Connection = con;
-                cmd.CommandText = "update productsTB set productsName='" + productName.Text + "',product_UnitPrice='" + product_UnitPrice.Text + "',product_KgPrice='" + product_KgPrice.Text + "',categoryName='" + comboBox1.Text + "'";
+                cmd.CommandText = "update productsTB set productsName='" + productName.Text + "',product_UnitPrice='" + product_UnitPrice.Text + "',product_KgPrice='" + product_KgPrice.Text + "',categoryName='" + comboBox1.Text + "','" + txtUnitTotal.Text + "','" + txtKgTotal.Text + "'";
                 cmd.ExecuteNonQuery();
                 con.Close();
                 fillProducts();
