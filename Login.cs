@@ -26,6 +26,7 @@ namespace Market_Automation
 
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
         private void closebtn_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -75,8 +76,6 @@ namespace Market_Automation
             dr.Close();
             con.Close();
         }
-
-
         public void loginActivity(string username, string password)
         {
             try
@@ -176,46 +175,6 @@ namespace Market_Automation
             System.Diagnostics.Process.Start("http://ensaryesir.great-site.net");
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
         private void closebtn_MouseHover(object sender, EventArgs e)
         {
             closebtn.BackColor = Color.Red;
@@ -232,7 +191,6 @@ namespace Market_Automation
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
- 
         private void panelRightTop_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();

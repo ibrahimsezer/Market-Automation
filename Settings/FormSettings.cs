@@ -78,10 +78,5 @@ namespace Market_Automation.Forms
         {
             OpenChildForm(new Settings.Change_Password(), sender);
         }
-
-        private void panelDesktopPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }

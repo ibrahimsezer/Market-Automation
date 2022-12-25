@@ -112,15 +112,7 @@ namespace Market_Automation.Product_Section
             cmd.ExecuteNonQuery();
             con.Close();
         }
-        private void insert_categoryTB()
-        {
-            cmd = new SqlCommand();
-            con.Open();
-            cmd.Connection = con;
-            cmd.CommandText = "insert into categoryTB (categoryName) values ('" + comboBox1.Text + "')";
-            cmd.ExecuteNonQuery();
-            con.Close();
-        }
+
         private void btnAdd_Click(object sender, EventArgs e)
         {
             try

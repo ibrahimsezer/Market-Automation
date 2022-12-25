@@ -82,7 +82,6 @@
             this.panelRight.Name = "panelRight";
             this.panelRight.Size = new System.Drawing.Size(450, 530);
             this.panelRight.TabIndex = 1;
-            this.panelRight.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // authorityCombobox
             // 
@@ -203,7 +202,6 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 2;
             this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             this.pictureBox3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox3_MouseDown);
             this.pictureBox3.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox3_MouseUp);
             // 
@@ -240,7 +238,6 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // label8
             // 
@@ -299,7 +296,6 @@
             this.label3.Size = new System.Drawing.Size(81, 24);
             this.label3.TabIndex = 19;
             this.label3.Text = "System";
-            this.label3.Click += new System.EventHandler(this.label3_Click_1);
             // 
             // label2
             // 
@@ -311,7 +307,6 @@
             this.label2.Size = new System.Drawing.Size(208, 24);
             this.label2.TabIndex = 18;
             this.label2.Text = "Market Automation";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 

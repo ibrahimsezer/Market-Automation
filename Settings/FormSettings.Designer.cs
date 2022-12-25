@@ -41,12 +41,11 @@ namespace Market_Automation.Forms
             // panelDesktopPanel
             // 
             this.panelDesktopPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDesktopPanel.Location = new System.Drawing.Point(220, 0);
-            this.panelDesktopPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelDesktopPanel.Location = new System.Drawing.Point(165, 0);
+            this.panelDesktopPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelDesktopPanel.Name = "panelDesktopPanel";
-            this.panelDesktopPanel.Size = new System.Drawing.Size(865, 727);
+            this.panelDesktopPanel.Size = new System.Drawing.Size(649, 591);
             this.panelDesktopPanel.TabIndex = 5;
-            this.panelDesktopPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDesktopPanel_Paint);
             // 
             // panelMenu
             // 
@@ -56,9 +55,9 @@ namespace Market_Automation.Forms
             this.panelMenu.Controls.Add(this.btn_listUsers);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
-            this.panelMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelMenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(220, 727);
+            this.panelMenu.Size = new System.Drawing.Size(165, 591);
             this.panelMenu.TabIndex = 3;
             // 
             // btn_changePassword
@@ -70,11 +69,11 @@ namespace Market_Automation.Forms
             this.btn_changePassword.ForeColor = System.Drawing.Color.Gainsboro;
             this.btn_changePassword.Image = ((System.Drawing.Image)(resources.GetObject("btn_changePassword.Image")));
             this.btn_changePassword.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_changePassword.Location = new System.Drawing.Point(0, 120);
-            this.btn_changePassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_changePassword.Location = new System.Drawing.Point(0, 98);
+            this.btn_changePassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_changePassword.Name = "btn_changePassword";
-            this.btn_changePassword.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.btn_changePassword.Size = new System.Drawing.Size(220, 60);
+            this.btn_changePassword.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btn_changePassword.Size = new System.Drawing.Size(165, 49);
             this.btn_changePassword.TabIndex = 2;
             this.btn_changePassword.Text = "Change Password";
             this.btn_changePassword.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -91,11 +90,11 @@ namespace Market_Automation.Forms
             this.btn_createAccount.ForeColor = System.Drawing.Color.Gainsboro;
             this.btn_createAccount.Image = ((System.Drawing.Image)(resources.GetObject("btn_createAccount.Image")));
             this.btn_createAccount.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_createAccount.Location = new System.Drawing.Point(0, 60);
-            this.btn_createAccount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_createAccount.Location = new System.Drawing.Point(0, 49);
+            this.btn_createAccount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_createAccount.Name = "btn_createAccount";
-            this.btn_createAccount.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.btn_createAccount.Size = new System.Drawing.Size(220, 60);
+            this.btn_createAccount.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btn_createAccount.Size = new System.Drawing.Size(165, 49);
             this.btn_createAccount.TabIndex = 1;
             this.btn_createAccount.Text = "Create an Account";
             this.btn_createAccount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -113,10 +112,10 @@ namespace Market_Automation.Forms
             this.btn_listUsers.Image = ((System.Drawing.Image)(resources.GetObject("btn_listUsers.Image")));
             this.btn_listUsers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_listUsers.Location = new System.Drawing.Point(0, 0);
-            this.btn_listUsers.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_listUsers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_listUsers.Name = "btn_listUsers";
-            this.btn_listUsers.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.btn_listUsers.Size = new System.Drawing.Size(220, 60);
+            this.btn_listUsers.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btn_listUsers.Size = new System.Drawing.Size(165, 49);
             this.btn_listUsers.TabIndex = 0;
             this.btn_listUsers.Text = "List Users";
             this.btn_listUsers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -126,12 +125,12 @@ namespace Market_Automation.Forms
             // 
             // FormSettings
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1085, 727);
+            this.ClientSize = new System.Drawing.Size(814, 591);
             this.Controls.Add(this.panelDesktopPanel);
             this.Controls.Add(this.panelMenu);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormSettings";
             this.Text = "FormSettings";
             this.Load += new System.EventHandler(this.FormSettings_Load);

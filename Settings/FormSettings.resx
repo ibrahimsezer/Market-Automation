@@ -121,7 +121,7 @@
   <data name="btn_changePassword.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        7AAAAOwBeShxvQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAU1SURBVFhHvVdb
+        6wAAAOsBK2zXwgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAU1SURBVFhHvVdb
         bBRVGB4khMSGS7k8KNZExM6uUIo7uy2lhd3WWrp3WrNUDQpqd7alVjFAgvLgbKttsV4IAZO2mJgACfAG
         MQ34YqBYX6omNsqDIsTShTapUbBt7O33/2f+HRz2dC0N4Uu+TOY7Z+f7zn/OmTkrzRQef3y/x6f9htft
         eDvHUB8gPL54ndunTWII8Pi1rlK/tpKbpDWunVmyEn0rW1GLFEWdx/L9Q3GgIReNO5CjegCDzdws2ZRY
@@ -150,7 +150,7 @@
   <data name="btn_createAccount.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        7AAAAOwBeShxvQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAATfSURBVFhH7ZZb
+        6wAAAOsBK2zXwgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAATfSURBVFhH7ZZb
         TFt1HMcX45PGxO3VJxNdXBY3Fx8WffNhwTnjFpNNzeY1umzEmPkwncilXFYG5Vpa6splDnrKpTBgUEoL
         hULLacsKFAKUyyjhjhBgg9GesyE//+f0tD3n9E/Z1Md9k88D5f/7f77n9H8O7Huep42ihz4st9Hnszr9
         6dfb6YZkM30npdWvSrNsfynpgBe5Zf9vVKTvNSVJyRCTSjsFfBQkBZmdFCSZKLhmoLcTTdSwxER9xI3+
@@ -177,7 +177,7 @@
   <data name="btn_listUsers.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        7AAAAOwBeShxvQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAARdSURBVFhH7Zdx
+        6wAAAOsBK2zXwgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAARdSURBVFhH7Zdx
         TBNXHMdhoSstpUB7tJUWOitsrBujWBTLDGRBJqRbEVvQbEiFSSlFbQeSbYz9ZzQz2V/+YfQPWcTFxDm3
         xYGJbovJNrcYhRmxBR1bdDAQLcvWboV28Nu7u/ba610taeA/v8knaXqXfD/tu3fvvaRgarlcro/H49Hg
         8/kLAkF6gMfj+9E9fQjLY3gZgacJwXY9xCYEI47e93oDC755iGTuoRcm7jyCXW+2LlXJ8vwdBS/5YvGx

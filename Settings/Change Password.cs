@@ -83,10 +83,5 @@ namespace Market_Automation.Settings
             changePassword.BackColor = Color.FromArgb(51, 51, 76);
 
         }
-
-        private void selectUser_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
