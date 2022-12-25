@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Market_Automation.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -63,7 +64,7 @@ namespace Market_Automation
         public void pullData()
         {
             con.Open();
-            SqlCommand cmd = new SqlCommand("Select userAuthority From userTB", con);
+            SqlCommand cmd = new SqlCommand("select distinct userAuthority from userTB ", con);
 
             SqlDataReader dr = cmd.ExecuteReader();
 
@@ -87,6 +88,19 @@ namespace Market_Automation
                 if (dr.Read())
                 {   
                     MessageBox.Show("You have successfully logged in as " + authorityCombobox.Text, "Informing", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    //--------------------------------------------------------
+                    string authority_str = authorityCombobox.Text;
+                    string str = "Cashier";
+
+                    if (authority_str == str) // if içine girmiyor 
+                    {
+                        MessageBox.Show("2. if döngüsü çalıştı");
+                        MainMenu mn = new MainMenu();
+                        mn.disableButton();
+                    }
+                    //---------------------------------------------------------
+
                     dr.Close();
                     login.Hide();
                     MainMenu mm = new MainMenu();

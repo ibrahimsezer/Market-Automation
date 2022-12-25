@@ -156,9 +156,9 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(3, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(111, 21);
+            this.label1.Size = new System.Drawing.Size(67, 21);
             this.label1.TabIndex = 20;
-            this.label1.Text = "Customer ID:";
+            this.label1.Text = "User ID:";
             // 
             // panel2
             // 

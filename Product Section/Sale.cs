@@ -85,12 +85,21 @@ namespace Market_Automation.Product_Section
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            int Kg = int.Parse(txtKgPrice.Text);
-            int Unit = int.Parse(txtUnitPrice.Text);
-            int total = (Kg + Unit) * int.Parse(unitCount.Text);
-            string totalPrice = Convert.ToString(total);
-            listReceipt.Items.Add(unitCount.Text + " Unit, Kg Price:" + txtKgPrice.Text + ", Unit Price:" + txtUnitPrice.Text + ", Total Price:" + totalPrice);
-            lbltotalPrice.Text = (totalPrice);
+            try
+            {
+                float Kg = float.Parse(txtKgPrice.Text);
+                float Unit = float.Parse(txtUnitPrice.Text);
+                float total = (Kg + Unit) * float.Parse(unitCount.Text);
+                string totalPrice = Convert.ToString(total);
+                listReceipt.Items.Add(unitCount.Text + " Unit '" + lblName.Text + "', Kg Price:" + txtKgPrice.Text + ", Unit Price:" + txtUnitPrice.Text + ", Total Price:" + totalPrice);
+                lbltotalPrice.Text = (totalPrice);
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Error: " + error);
+                throw;
+            }
+            
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -104,6 +113,9 @@ namespace Market_Automation.Product_Section
             lblCategory.Text = "";
             lblTotalUnit.Text = "";
             lblTotalWeight.Text = "";
+            lbltotalPrice.Text = "";
+            lblChange.Text = "";
+            lblRemainder.Text = "";
 
             txtUnitPrice.Text = "";
             txtKgPrice.Text = "";
@@ -144,6 +156,21 @@ namespace Market_Automation.Product_Section
                 for (int i = 0; i < listReceipt.Items.Count; i++)
                     e.Graphics.DrawString(listReceipt.Items[i].ToString(), font, Brushes.Black, leftMargin, topMargin + h * i, fmt);
             }
+        }
+
+        private void btnWater_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPochette_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBread_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

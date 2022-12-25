@@ -131,6 +131,12 @@ namespace Market_Automation
             OpenChildForm(new Forms.FormNotifications(), sender);
 
         }
+
+        public void disableButton()
+        {
+            btnSettings.Visible = false;
+            btnSettings.Enabled = false;
+        }
         private void btnSettings_Click_1(object sender, EventArgs e)
         {
             OpenChildForm(new Forms.FormSettings(), sender);

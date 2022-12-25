@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.panelRight = new System.Windows.Forms.Panel();
+            this.authorityCombobox = new System.Windows.Forms.ComboBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -53,7 +54,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.authorityCombobox = new System.Windows.Forms.ComboBox();
             this.panelRight.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -83,6 +83,17 @@
             this.panelRight.Size = new System.Drawing.Size(450, 530);
             this.panelRight.TabIndex = 1;
             this.panelRight.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // authorityCombobox
+            // 
+            this.authorityCombobox.BackColor = System.Drawing.SystemColors.Control;
+            this.authorityCombobox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.authorityCombobox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.authorityCombobox.FormattingEnabled = true;
+            this.authorityCombobox.Location = new System.Drawing.Point(290, 303);
+            this.authorityCombobox.Name = "authorityCombobox";
+            this.authorityCombobox.Size = new System.Drawing.Size(148, 29);
+            this.authorityCombobox.TabIndex = 26;
             // 
             // linkLabel1
             // 
@@ -273,7 +284,7 @@
             this.panelLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelLeft.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.panelLeft.Location = new System.Drawing.Point(0, 0);
-            this.panelLeft.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelLeft.Margin = new System.Windows.Forms.Padding(2);
             this.panelLeft.Name = "panelLeft";
             this.panelLeft.Size = new System.Drawing.Size(300, 530);
             this.panelLeft.TabIndex = 2;
@@ -368,17 +379,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
-            // 
-            // authorityCombobox
-            // 
-            this.authorityCombobox.BackColor = System.Drawing.SystemColors.Control;
-            this.authorityCombobox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.authorityCombobox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.authorityCombobox.FormattingEnabled = true;
-            this.authorityCombobox.Location = new System.Drawing.Point(290, 303);
-            this.authorityCombobox.Name = "authorityCombobox";
-            this.authorityCombobox.Size = new System.Drawing.Size(148, 29);
-            this.authorityCombobox.TabIndex = 26;
             // 
             // Login
             // 

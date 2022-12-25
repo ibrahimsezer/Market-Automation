@@ -74,6 +74,7 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "Admin",
+            "Cashier",
             "Customer"});
             this.comboBox1.Location = new System.Drawing.Point(116, 111);
             this.comboBox1.Name = "comboBox1";

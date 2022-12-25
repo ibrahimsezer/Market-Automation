@@ -44,7 +44,7 @@ namespace Market_Automation.Product_Section
         void fillProducts()
         {
             con = new SqlConnection(@"Data source=.; initial catalog=marketDB; integrated Security=True");
-            da = new SqlDataAdapter("select productsID as 'ID', productsName as 'Product Name', product_UnitPrice as 'Unit Price', product_KgPrice as 'Kilogram Price', categoryName as 'Category', productUnitCount as 'Total', productKgCount as 'Kg Total' from productsTB", con);
+            da = new SqlDataAdapter("select productsID as 'ID', productsName as 'Product Name', product_UnitPrice as 'Unit Price', product_KgPrice as 'Kilogram Price', categoryName as 'Category', productUnitCount as 'Unit Total', productKgCount as 'Total Weight (KG)' from productsTB", con);
             ds = new DataSet();
             con.Open();
             da.Fill(ds, "productsTB");
@@ -399,6 +399,9 @@ namespace Market_Automation.Product_Section
             product_UnitPrice.Clear();
             product_KgPrice.Clear();
             searchProduct.Clear();
+            comboBox1.SelectedItem= null;
+            txtUnitTotal.Clear();
+            txtKgTotal.Clear();
         }
 
         private void btnDelete_MouseHover(object sender, EventArgs e)
