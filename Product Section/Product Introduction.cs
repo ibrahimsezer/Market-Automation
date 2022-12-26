@@ -189,6 +189,7 @@ namespace Market_Automation.Product_Section
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             fillProducts();
+            comboBox2.SelectedItem = null;
         }
 
         private void searchProduct_TextChanged(object sender, EventArgs e)
