@@ -96,6 +96,10 @@ namespace Market_Automation.Product_Section
 
                 string totalPrice = Convert.ToString(count);
                 listReceipt.Items.Add(unitCount.Text + " Unit '" + lblName.Text + "', Kg Price:" + txtKgPrice.Text + ", Unit Price:" + txtUnitPrice.Text + ", Total Price:" + total);
+                listBoxCount.Items.Add(unitCount.Text);
+                listBoxNameCount.Items.Add(lblName.Text);
+                listTotalUnit.Items.Add(lblTotalUnit.Text);
+                listTotalWeight.Items.Add(lblTotalWeight.Text);
                 lbltotalPrice.Text = (totalPrice);
             }
             catch (Exception error)
@@ -118,8 +122,6 @@ namespace Market_Automation.Product_Section
             lblTotalUnit.Text = "";
             lblTotalWeight.Text = "";
             lbltotalPrice.Text = "";
-            lblChange.Text = "";
-            lblRemainder.Text = "";
 
             txtUnitPrice.Text = "";
             txtKgPrice.Text = "";
@@ -128,15 +130,14 @@ namespace Market_Automation.Product_Section
 
             listReceipt.Items.Clear();
             count = 0;
-        }
 
-        private void btnCut_Click(object sender, EventArgs e)
-        {
-            PrintPreviewDialog ppd = new PrintPreviewDialog();
-            ppd.Document = printDocument1;
-            ppd.Document.DocumentName = "TESTING";
-            printDocument1.PrintPage += printDocument1_PrintPage;
-            ppd.ShowDialog();
+            txtMoney.Text = "";
+            txtRemainder.Text = "";
+
+            listBoxCount.Items.Clear();
+            listBoxNameCount.Items.Clear();
+            listTotalUnit.Items.Clear();
+            listTotalWeight.Items.Clear();
         }
 
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
@@ -165,22 +166,126 @@ namespace Market_Automation.Product_Section
 
         private void btnWater_Click(object sender, EventArgs e)
         {
-
+            txtBarcode.Text = "16";
+            btnSearch_Click(sender, e);
         }
 
         private void btnPochette_Click(object sender, EventArgs e)
         {
-
+            txtBarcode.Text = "17";
+            btnSearch_Click(sender, e);
         }
 
         private void btnBread_Click(object sender, EventArgs e)
         {
-
+            txtBarcode.Text = "18";
+            btnSearch_Click(sender, e);
         }
 
         private void btnSell_Click(object sender, EventArgs e)
         {
-            btnCancel_Click(sender, e);
+            try
+            {
+                double remainder = double.Parse(txtRemainder.Text);
+                if (remainder < 0 || remainder.ToString() == "")
+                {
+                    MessageBox.Show("The balance is insufficient", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    SqlConnection con = new SqlConnection(@"Data source=.; initial catalog=marketDB; integrated Security=True");
+                    con.Open();
+
+
+                    for (int i = 0; i < listReceipt.Items.Count; i++)
+                    {
+                        listReceipt.Items[i].ToString();
+
+                        if (listTotalUnit.Items[i].ToString() == "0" && listTotalWeight.Items[i].ToString() != "0")
+                        {
+                            double doubleTotal1 = double.Parse(lblTotalWeight.Text);
+                            double doubleTotal2 = double.Parse(listBoxCount.Items[i].ToString());
+                            double doubleTotal3 = doubleTotal1 - doubleTotal2;
+
+                            if (doubleTotal3 > 0)
+                            {
+                                SqlCommand cmd1 = new SqlCommand("update productsTB SET productKgCount = '" + doubleTotal3 + "' where productsName = '" + listBoxNameCount.Items[i].ToString() + "'", con);
+                                cmd1.ExecuteNonQuery();
+                            }
+                            else
+                            {
+                                MessageBox.Show("There are not enough of this product in stock (KG)");
+                            }
+
+                        }
+
+                        else if (listTotalUnit.Items[i].ToString() != "0" && listTotalWeight.Items[i].ToString() == "0")
+                        {
+                            int intTotal1 = int.Parse(lblTotalUnit.Text);
+                            int intTotal2 = int.Parse(listBoxCount.Items[i].ToString());
+                            int intTotal3 = intTotal1 - intTotal2;
+
+                            if (intTotal3 > 0)
+                            {
+                                SqlCommand cmd2 = new SqlCommand("update productsTB SET productUnitCount = '" + intTotal3 + "' where productsName = '" + listBoxNameCount.Items[i].ToString() + "'", con);
+                                cmd2.ExecuteNonQuery();
+                            }
+                            else
+                            {
+                                MessageBox.Show("There are not enough of this product in stock (Unit)");
+                            }
+                        }
+
+                        else if (listTotalUnit.Items[i].ToString() == "0" && listTotalWeight.Items[i].ToString() == "0")
+                        {
+                            MessageBox.Show("The product is not available in our stocks");
+                        }
+                    }
+
+                    PrintPreviewDialog ppd = new PrintPreviewDialog();
+                    ppd.Document = printDocument1;
+                    ppd.Document.DocumentName = "TESTING";
+                    printDocument1.PrintPage += printDocument1_PrintPage;
+                    ppd.ShowDialog();
+
+                    btnCancel_Click(sender, e);
+                }
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Error:" + error);
+            }
+        }
+        
+
+        private void btnTransactions_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                double sum_of_money = Convert.ToDouble(txtMoney.Text);
+                double total_price = Convert.ToDouble(lbltotalPrice.Text);
+                if (sum_of_money > total_price)
+                {
+                    double remainder = sum_of_money - total_price;
+                    txtRemainder.Text = remainder.ToString();
+                }
+                else
+                {
+                    MessageBox.Show("The balance is insufficient", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Error:" + error);
+            }
+        }
+
+        private void Sale_Load(object sender, EventArgs e)
+        {
+            listBoxCount.Visible = false;
+            listBoxNameCount.Visible = false;
+            listTotalUnit.Visible = false;
+            listTotalWeight.Visible = false;
         }
     }
 }

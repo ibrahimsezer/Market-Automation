@@ -67,11 +67,10 @@ namespace Market_Automation
             this.panelMenu.Controls.Add(this.panelLogo);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
-            this.panelMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelMenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(220, 1031);
+            this.panelMenu.Size = new System.Drawing.Size(165, 838);
             this.panelMenu.TabIndex = 0;
-            this.panelMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMenu_Paint);
             // 
             // btnSettings
             // 
@@ -82,11 +81,11 @@ namespace Market_Automation
             this.btnSettings.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnSettings.Image = ((System.Drawing.Image)(resources.GetObject("btnSettings.Image")));
             this.btnSettings.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSettings.Location = new System.Drawing.Point(0, 380);
-            this.btnSettings.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSettings.Location = new System.Drawing.Point(0, 310);
+            this.btnSettings.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSettings.Name = "btnSettings";
-            this.btnSettings.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.btnSettings.Size = new System.Drawing.Size(220, 60);
+            this.btnSettings.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btnSettings.Size = new System.Drawing.Size(165, 49);
             this.btnSettings.TabIndex = 5;
             this.btnSettings.Text = "Settings";
             this.btnSettings.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -103,11 +102,11 @@ namespace Market_Automation
             this.btnNotifications.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnNotifications.Image = ((System.Drawing.Image)(resources.GetObject("btnNotifications.Image")));
             this.btnNotifications.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNotifications.Location = new System.Drawing.Point(0, 320);
-            this.btnNotifications.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnNotifications.Location = new System.Drawing.Point(0, 261);
+            this.btnNotifications.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnNotifications.Name = "btnNotifications";
-            this.btnNotifications.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.btnNotifications.Size = new System.Drawing.Size(220, 60);
+            this.btnNotifications.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btnNotifications.Size = new System.Drawing.Size(165, 49);
             this.btnNotifications.TabIndex = 4;
             this.btnNotifications.Text = "Notifications";
             this.btnNotifications.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -124,11 +123,11 @@ namespace Market_Automation
             this.btnReporting.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnReporting.Image = ((System.Drawing.Image)(resources.GetObject("btnReporting.Image")));
             this.btnReporting.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReporting.Location = new System.Drawing.Point(0, 260);
-            this.btnReporting.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnReporting.Location = new System.Drawing.Point(0, 212);
+            this.btnReporting.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnReporting.Name = "btnReporting";
-            this.btnReporting.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.btnReporting.Size = new System.Drawing.Size(220, 60);
+            this.btnReporting.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btnReporting.Size = new System.Drawing.Size(165, 49);
             this.btnReporting.TabIndex = 3;
             this.btnReporting.Text = "Reporting";
             this.btnReporting.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -145,11 +144,11 @@ namespace Market_Automation
             this.btnCustomer.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnCustomer.Image = ((System.Drawing.Image)(resources.GetObject("btnCustomer.Image")));
             this.btnCustomer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCustomer.Location = new System.Drawing.Point(0, 200);
-            this.btnCustomer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCustomer.Location = new System.Drawing.Point(0, 163);
+            this.btnCustomer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCustomer.Name = "btnCustomer";
-            this.btnCustomer.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.btnCustomer.Size = new System.Drawing.Size(220, 60);
+            this.btnCustomer.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btnCustomer.Size = new System.Drawing.Size(165, 49);
             this.btnCustomer.TabIndex = 2;
             this.btnCustomer.Text = "Customer";
             this.btnCustomer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -166,11 +165,11 @@ namespace Market_Automation
             this.btnOrder.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnOrder.Image = ((System.Drawing.Image)(resources.GetObject("btnOrder.Image")));
             this.btnOrder.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnOrder.Location = new System.Drawing.Point(0, 140);
-            this.btnOrder.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnOrder.Location = new System.Drawing.Point(0, 114);
+            this.btnOrder.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnOrder.Name = "btnOrder";
-            this.btnOrder.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.btnOrder.Size = new System.Drawing.Size(220, 60);
+            this.btnOrder.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btnOrder.Size = new System.Drawing.Size(165, 49);
             this.btnOrder.TabIndex = 1;
             this.btnOrder.Text = "Order";
             this.btnOrder.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -187,11 +186,11 @@ namespace Market_Automation
             this.btnProducts.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnProducts.Image = ((System.Drawing.Image)(resources.GetObject("btnProducts.Image")));
             this.btnProducts.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProducts.Location = new System.Drawing.Point(0, 80);
-            this.btnProducts.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnProducts.Location = new System.Drawing.Point(0, 65);
+            this.btnProducts.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnProducts.Name = "btnProducts";
-            this.btnProducts.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.btnProducts.Size = new System.Drawing.Size(220, 60);
+            this.btnProducts.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btnProducts.Size = new System.Drawing.Size(165, 49);
             this.btnProducts.TabIndex = 0;
             this.btnProducts.Text = "Products";
             this.btnProducts.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -205,20 +204,20 @@ namespace Market_Automation
             this.panelLogo.Controls.Add(this.lblLogo);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelLogo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(220, 80);
+            this.panelLogo.Size = new System.Drawing.Size(165, 65);
             this.panelLogo.TabIndex = 0;
-            this.panelLogo.Paint += new System.Windows.Forms.PaintEventHandler(this.panelLogo_Paint);
             // 
             // lblLogo
             // 
             this.lblLogo.AutoSize = true;
             this.lblLogo.Font = new System.Drawing.Font("Malgun Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLogo.ForeColor = System.Drawing.Color.White;
-            this.lblLogo.Location = new System.Drawing.Point(72, 25);
+            this.lblLogo.Location = new System.Drawing.Point(54, 20);
+            this.lblLogo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblLogo.Name = "lblLogo";
-            this.lblLogo.Size = new System.Drawing.Size(62, 28);
+            this.lblLogo.Size = new System.Drawing.Size(50, 21);
             this.lblLogo.TabIndex = 0;
             this.lblLogo.Text = "BIMO";
             // 
@@ -231,13 +230,11 @@ namespace Market_Automation
             this.panelTitleBar.Controls.Add(this.btnCloseChildForms);
             this.panelTitleBar.Controls.Add(this.lblTitle);
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTitleBar.Location = new System.Drawing.Point(220, 0);
-            this.panelTitleBar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelTitleBar.Location = new System.Drawing.Point(165, 0);
+            this.panelTitleBar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(1680, 80);
+            this.panelTitleBar.Size = new System.Drawing.Size(1260, 65);
             this.panelTitleBar.TabIndex = 1;
-            this.panelTitleBar.DragOver += new System.Windows.Forms.DragEventHandler(this.panelTitleBar_DragOver);
-            this.panelTitleBar.Paint += new System.Windows.Forms.PaintEventHandler(this.panelTitleBar_Paint);
             this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown_1);
             // 
             // btnMinimize
@@ -248,10 +245,10 @@ namespace Market_Automation
             this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMinimize.Font = new System.Drawing.Font("Myanmar Text", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMinimize.ForeColor = System.Drawing.Color.White;
-            this.btnMinimize.Location = new System.Drawing.Point(1588, 2);
-            this.btnMinimize.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnMinimize.Location = new System.Drawing.Point(1191, 2);
+            this.btnMinimize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(29, 30);
+            this.btnMinimize.Size = new System.Drawing.Size(22, 24);
             this.btnMinimize.TabIndex = 5;
             this.btnMinimize.Text = "-";
             this.btnMinimize.UseVisualStyleBackColor = true;
@@ -265,10 +262,10 @@ namespace Market_Automation
             this.btnMaximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMaximize.Font = new System.Drawing.Font("Myanmar Text", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMaximize.ForeColor = System.Drawing.Color.White;
-            this.btnMaximize.Location = new System.Drawing.Point(1620, 2);
-            this.btnMaximize.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnMaximize.Location = new System.Drawing.Point(1215, 2);
+            this.btnMaximize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnMaximize.Name = "btnMaximize";
-            this.btnMaximize.Size = new System.Drawing.Size(29, 30);
+            this.btnMaximize.Size = new System.Drawing.Size(22, 24);
             this.btnMaximize.TabIndex = 4;
             this.btnMaximize.Text = "O";
             this.btnMaximize.UseVisualStyleBackColor = true;
@@ -282,10 +279,10 @@ namespace Market_Automation
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Myanmar Text", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(1651, 2);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnClose.Location = new System.Drawing.Point(1238, 2);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(29, 30);
+            this.btnClose.Size = new System.Drawing.Size(22, 24);
             this.btnClose.TabIndex = 3;
             this.btnClose.Text = "X";
             this.btnClose.UseVisualStyleBackColor = true;
@@ -298,9 +295,9 @@ namespace Market_Automation
             this.btnCloseChildForms.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCloseChildForms.Image = ((System.Drawing.Image)(resources.GetObject("btnCloseChildForms.Image")));
             this.btnCloseChildForms.Location = new System.Drawing.Point(0, 0);
-            this.btnCloseChildForms.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCloseChildForms.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCloseChildForms.Name = "btnCloseChildForms";
-            this.btnCloseChildForms.Size = new System.Drawing.Size(75, 80);
+            this.btnCloseChildForms.Size = new System.Drawing.Size(56, 65);
             this.btnCloseChildForms.TabIndex = 1;
             this.btnCloseChildForms.UseVisualStyleBackColor = true;
             this.btnCloseChildForms.Click += new System.EventHandler(this.btnCloseChildForms_Click);
@@ -311,22 +308,22 @@ namespace Market_Automation
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Malgun Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(780, 17);
+            this.lblTitle.Location = new System.Drawing.Point(585, 14);
+            this.lblTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(99, 38);
+            this.lblTitle.Size = new System.Drawing.Size(77, 30);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "HOME";
-            this.lblTitle.Click += new System.EventHandler(this.lblTitle_Click);
             // 
             // panelDesktopPanel
             // 
             this.panelDesktopPanel.Controls.Add(this.lblWelcome);
             this.panelDesktopPanel.Controls.Add(this.pbLogo);
             this.panelDesktopPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDesktopPanel.Location = new System.Drawing.Point(220, 80);
-            this.panelDesktopPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelDesktopPanel.Location = new System.Drawing.Point(165, 65);
+            this.panelDesktopPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelDesktopPanel.Name = "panelDesktopPanel";
-            this.panelDesktopPanel.Size = new System.Drawing.Size(1680, 951);
+            this.panelDesktopPanel.Size = new System.Drawing.Size(1260, 773);
             this.panelDesktopPanel.TabIndex = 2;
             this.panelDesktopPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDesktopPanel_Paint);
             // 
@@ -335,10 +332,11 @@ namespace Market_Automation
             this.lblWelcome.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lblWelcome.AutoSize = true;
             this.lblWelcome.Font = new System.Drawing.Font("Malgun Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWelcome.Location = new System.Drawing.Point(371, 838);
+            this.lblWelcome.Location = new System.Drawing.Point(278, 681);
+            this.lblWelcome.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Padding = new System.Windows.Forms.Padding(220, 50, 91, 15);
-            this.lblWelcome.Size = new System.Drawing.Size(845, 97);
+            this.lblWelcome.Padding = new System.Windows.Forms.Padding(165, 41, 68, 12);
+            this.lblWelcome.Size = new System.Drawing.Size(656, 78);
             this.lblWelcome.TabIndex = 1;
             this.lblWelcome.Text = "Welcome to the market automation interface";
             // 
@@ -347,28 +345,26 @@ namespace Market_Automation
             this.pbLogo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pbLogo.Image = ((System.Drawing.Image)(resources.GetObject("pbLogo.Image")));
             this.pbLogo.Location = new System.Drawing.Point(0, 0);
-            this.pbLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pbLogo.MinimumSize = new System.Drawing.Size(600, 350);
+            this.pbLogo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbLogo.MinimumSize = new System.Drawing.Size(450, 284);
             this.pbLogo.Name = "pbLogo";
-            this.pbLogo.Size = new System.Drawing.Size(1680, 951);
+            this.pbLogo.Size = new System.Drawing.Size(1260, 773);
             this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pbLogo.TabIndex = 0;
             this.pbLogo.TabStop = false;
-            this.pbLogo.Click += new System.EventHandler(this.pbLogo_Click);
             // 
             // MainMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1900, 1031);
+            this.ClientSize = new System.Drawing.Size(1425, 838);
             this.Controls.Add(this.panelDesktopPanel);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.MinimumSize = new System.Drawing.Size(1800, 900);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MinimumSize = new System.Drawing.Size(1354, 739);
             this.Name = "MainMenu";
             this.Text = "MainMenu";
-            this.Load += new System.EventHandler(this.MainMenu_Load);
             this.panelMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             this.panelLogo.PerformLayout();

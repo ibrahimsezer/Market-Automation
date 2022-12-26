@@ -35,11 +35,6 @@ namespace Market_Automation
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
 
-        private void MainMenu_Load(object sender, EventArgs e)
-        {
-       
-        }
-
         private Color SelectThemeColor()
         {
             int index = random.Next(ThemeColor.ColorList.Count);
@@ -136,6 +131,7 @@ namespace Market_Automation
         {
             btnSettings.Visible = false;
             btnSettings.Enabled = false;
+            btnSettings.Hide();
         }
         private void btnSettings_Click_1(object sender, EventArgs e)
         {
@@ -179,11 +175,6 @@ namespace Market_Automation
 
         }
 
-        private void pbLogo_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void panelTitleBar_MouseDown(object sender, MouseEventArgs e)
         {
       
@@ -209,37 +200,10 @@ namespace Market_Automation
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void panelLogo_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panelTitleBar_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panelTitleBar_DragOver(object sender, DragEventArgs e)
-        {
-
-        }
-
         private void panelTitleBar_MouseDown_1(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
-
-        private void panelMenu_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void lblTitle_Click(object sender, EventArgs e)
-        {
-
-        }
-
-      
     }
 }

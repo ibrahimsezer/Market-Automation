@@ -7,6 +7,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
+using System.Runtime.Remoting.Channels;
 using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
@@ -89,21 +90,26 @@ namespace Market_Automation
                     MessageBox.Show("You have successfully logged in as " + authorityCombobox.Text, "Informing", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     //--------------------------------------------------------
-                    string authority_str = authorityCombobox.Text;
+                    string authority_str = authorityCombobox.SelectedItem.ToString();
                     string str = "Cashier";
 
-                    if (authority_str == str) // if içine girmiyor 
+                    if (authority_str == str)
                     {
-                        MessageBox.Show("2. if döngüsü çalıştı");
                         MainMenu mn = new MainMenu();
                         mn.disableButton();
+                        
+                        dr.Close();
+                        login.Hide();
+                        mn.Show();
                     }
                     //---------------------------------------------------------
-
-                    dr.Close();
-                    login.Hide();
-                    MainMenu mm = new MainMenu();
-                    mm.Show();
+                    else
+                    {
+                        dr.Close();
+                        login.Hide();
+                        MainMenu mm = new MainMenu();
+                        mm.Show();
+                    }                 
                 }
                 else
                 {
