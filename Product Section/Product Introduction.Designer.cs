@@ -60,6 +60,8 @@
             this.label8 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.comboBoxId = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Products)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -272,11 +274,11 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(33, 13);
+            this.label2.Location = new System.Drawing.Point(30, 43);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(128, 21);
+            this.label2.Size = new System.Drawing.Size(132, 21);
             this.label2.TabIndex = 60;
-            this.label2.Text = "Product Name:";
+            this.label2.Text = "Product Name :";
             // 
             // product_KgPrice
             // 
@@ -284,7 +286,7 @@
             this.product_KgPrice.BackColor = System.Drawing.SystemColors.Control;
             this.product_KgPrice.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.product_KgPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.product_KgPrice.Location = new System.Drawing.Point(167, 70);
+            this.product_KgPrice.Location = new System.Drawing.Point(167, 100);
             this.product_KgPrice.Name = "product_KgPrice";
             this.product_KgPrice.Size = new System.Drawing.Size(163, 27);
             this.product_KgPrice.TabIndex = 58;
@@ -295,7 +297,7 @@
             this.product_UnitPrice.BackColor = System.Drawing.SystemColors.Control;
             this.product_UnitPrice.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.product_UnitPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.product_UnitPrice.Location = new System.Drawing.Point(167, 40);
+            this.product_UnitPrice.Location = new System.Drawing.Point(167, 70);
             this.product_UnitPrice.Name = "product_UnitPrice";
             this.product_UnitPrice.Size = new System.Drawing.Size(163, 27);
             this.product_UnitPrice.TabIndex = 57;
@@ -323,7 +325,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.label5.ForeColor = System.Drawing.SystemColors.Control;
-            this.label5.Location = new System.Drawing.Point(2, 103);
+            this.label5.Location = new System.Drawing.Point(2, 133);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(159, 21);
             this.label5.TabIndex = 63;
@@ -335,7 +337,7 @@
             this.productName.BackColor = System.Drawing.SystemColors.Control;
             this.productName.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.productName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.productName.Location = new System.Drawing.Point(167, 10);
+            this.productName.Location = new System.Drawing.Point(167, 40);
             this.productName.Name = "productName";
             this.productName.Size = new System.Drawing.Size(163, 27);
             this.productName.TabIndex = 56;
@@ -346,11 +348,11 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(75, 43);
+            this.label3.Location = new System.Drawing.Point(72, 73);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(86, 21);
+            this.label3.Size = new System.Drawing.Size(90, 21);
             this.label3.TabIndex = 61;
-            this.label3.Text = "Unit Price:";
+            this.label3.Text = "Unit Price :";
             // 
             // label4
             // 
@@ -358,11 +360,11 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.label4.ForeColor = System.Drawing.SystemColors.Control;
-            this.label4.Location = new System.Drawing.Point(86, 73);
+            this.label4.Location = new System.Drawing.Point(82, 103);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(75, 21);
+            this.label4.Size = new System.Drawing.Size(79, 21);
             this.label4.TabIndex = 62;
-            this.label4.Text = "Kg Price:";
+            this.label4.Text = "Kg Price :";
             // 
             // comboBox1
             // 
@@ -372,7 +374,7 @@
             this.comboBox1.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.comboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(167, 100);
+            this.comboBox1.Location = new System.Drawing.Point(167, 130);
             this.comboBox1.MaxLength = 1;
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(163, 29);
@@ -380,6 +382,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.comboBoxId);
+            this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.txtKgTotal);
             this.panel1.Controls.Add(this.txtUnitTotal);
             this.panel1.Controls.Add(this.label1);
@@ -405,7 +409,7 @@
             this.txtKgTotal.BackColor = System.Drawing.SystemColors.Control;
             this.txtKgTotal.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.txtKgTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.txtKgTotal.Location = new System.Drawing.Point(167, 164);
+            this.txtKgTotal.Location = new System.Drawing.Point(167, 194);
             this.txtKgTotal.Name = "txtKgTotal";
             this.txtKgTotal.Size = new System.Drawing.Size(163, 27);
             this.txtKgTotal.TabIndex = 66;
@@ -416,7 +420,7 @@
             this.txtUnitTotal.BackColor = System.Drawing.SystemColors.Control;
             this.txtUnitTotal.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.txtUnitTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.txtUnitTotal.Location = new System.Drawing.Point(167, 133);
+            this.txtUnitTotal.Location = new System.Drawing.Point(167, 163);
             this.txtUnitTotal.Name = "txtUnitTotal";
             this.txtUnitTotal.Size = new System.Drawing.Size(163, 27);
             this.txtUnitTotal.TabIndex = 65;
@@ -427,7 +431,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(5, 167);
+            this.label1.Location = new System.Drawing.Point(5, 197);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(156, 21);
             this.label1.TabIndex = 68;
@@ -439,7 +443,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label8.ForeColor = System.Drawing.SystemColors.Control;
-            this.label8.Location = new System.Drawing.Point(69, 136);
+            this.label8.Location = new System.Drawing.Point(69, 166);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(92, 21);
             this.label8.TabIndex = 67;
@@ -467,6 +471,32 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(343, 182);
             this.panel3.TabIndex = 50;
+            // 
+            // label9
+            // 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label9.ForeColor = System.Drawing.SystemColors.Control;
+            this.label9.Location = new System.Drawing.Point(60, 13);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(101, 21);
+            this.label9.TabIndex = 70;
+            this.label9.Text = "Product ID :";
+            // 
+            // comboBoxId
+            // 
+            this.comboBoxId.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.comboBoxId.BackColor = System.Drawing.SystemColors.Control;
+            this.comboBoxId.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxId.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.comboBoxId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.comboBoxId.FormattingEnabled = true;
+            this.comboBoxId.Location = new System.Drawing.Point(167, 8);
+            this.comboBoxId.MaxLength = 1;
+            this.comboBoxId.Name = "comboBoxId";
+            this.comboBoxId.Size = new System.Drawing.Size(163, 29);
+            this.comboBoxId.TabIndex = 71;
             // 
             // Product_Introduction
             // 
@@ -521,5 +551,7 @@
         private System.Windows.Forms.TextBox txtUnitTotal;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label8;
+        public System.Windows.Forms.ComboBox comboBoxId;
+        private System.Windows.Forms.Label label9;
     }
 }

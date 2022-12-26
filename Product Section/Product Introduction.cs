@@ -25,7 +25,6 @@ namespace Market_Automation.Product_Section
         DataSet ds;
         int ID = 0;
 
-
         StringFormat strFormat;
         ArrayList arrColumnLefts = new ArrayList();
         ArrayList arrColumnWidths = new ArrayList();
@@ -36,6 +35,7 @@ namespace Market_Automation.Product_Section
         bool bNewPage = false;
         int iHeaderHeight = 0;
 
+        SqlDataReader dr;
         public Product_Introduction()
         {
             InitializeComponent();
@@ -92,6 +92,7 @@ namespace Market_Automation.Product_Section
             fillProducts();
             fillCategory();
             Control();
+            getID();
         }
 
         /*private void columnsHeader()
@@ -170,11 +171,12 @@ namespace Market_Automation.Product_Section
         {
             try
             {
+
                 //categoryID();
                 cmd = new SqlCommand();
                 con.Open();
                 cmd.Connection = con;
-                cmd.CommandText = "update productsTB set productsName='" + productName.Text + "',product_UnitPrice='" + product_UnitPrice.Text + "',product_KgPrice='" + product_KgPrice.Text + "',categoryName='" + comboBox1.Text + "','" + txtUnitTotal.Text + "','" + txtKgTotal.Text + "'";
+                cmd.CommandText = "update productsTB set productsName='" + productName.Text + "',product_UnitPrice='" + product_UnitPrice.Text + "',product_KgPrice='" + product_KgPrice.Text + "',categoryName='" + comboBox1.Text + "',productUnitCount='" + txtUnitTotal.Text + "',productKgCount='" + txtKgTotal.Text + "' where productsID='" + comboBoxId.Text + "'";
                 cmd.ExecuteNonQuery();
                 con.Close();
                 fillProducts();
@@ -462,6 +464,20 @@ namespace Market_Automation.Product_Section
             PrintPreviewDialog preview = new PrintPreviewDialog();
             preview.Document = printDocument1;
             preview.ShowDialog();
+        }
+        private void getID()
+        {
+            SqlConnection con = new SqlConnection(@"Data source=.; initial catalog=marketDB; integrated Security=True");
+            con.Open();
+            cmd = new SqlCommand("Select productsID From productsTB", con);
+
+            dr = cmd.ExecuteReader();
+
+            while (dr.Read())
+            {
+                comboBoxId.Items.Add(dr[0]).ToString();
+            }
+            dr.Close();
         }
     }
 }

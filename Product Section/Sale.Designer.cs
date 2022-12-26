@@ -72,6 +72,8 @@
             this.btnCut = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.unitCount)).BeginInit();
@@ -88,6 +90,8 @@
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.btnBread);
             this.panel1.Controls.Add(this.groupBox2);
+            this.panel1.Controls.Add(this.lblTAmount);
+            this.panel1.Controls.Add(this.lbltotalPrice);
             this.panel1.Controls.Add(this.btnWater);
             this.panel1.Controls.Add(this.btnCancel);
             this.panel1.Controls.Add(this.btnPochette);
@@ -224,19 +228,19 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Controls.Add(this.label15);
             this.groupBox1.Controls.Add(this.lblRemainder);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.lblChange);
-            this.groupBox1.Controls.Add(this.lblTAmount);
-            this.groupBox1.Controls.Add(this.lbltotalPrice);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.Control;
             this.groupBox1.Location = new System.Drawing.Point(27, 384);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(324, 153);
+            this.groupBox1.Size = new System.Drawing.Size(265, 153);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Money Transactions";
@@ -294,7 +298,7 @@
             this.lblTAmount.AutoSize = true;
             this.lblTAmount.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblTAmount.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblTAmount.Location = new System.Drawing.Point(35, 35);
+            this.lblTAmount.Location = new System.Drawing.Point(313, 405);
             this.lblTAmount.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTAmount.Name = "lblTAmount";
             this.lblTAmount.Size = new System.Drawing.Size(98, 21);
@@ -306,7 +310,7 @@
             this.lbltotalPrice.AutoSize = true;
             this.lbltotalPrice.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lbltotalPrice.ForeColor = System.Drawing.SystemColors.Control;
-            this.lbltotalPrice.Location = new System.Drawing.Point(137, 35);
+            this.lbltotalPrice.Location = new System.Drawing.Point(415, 405);
             this.lbltotalPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbltotalPrice.Name = "lbltotalPrice";
             this.lbltotalPrice.Size = new System.Drawing.Size(20, 21);
@@ -580,6 +584,7 @@
             this.btnSell.TabIndex = 9;
             this.btnSell.Text = "Sell";
             this.btnSell.UseVisualStyleBackColor = false;
+            this.btnSell.Click += new System.EventHandler(this.btnSell_Click);
             // 
             // txtBarcode
             // 
@@ -621,6 +626,30 @@
             // printDocument1
             // 
             this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label5.ForeColor = System.Drawing.SystemColors.Control;
+            this.label5.Location = new System.Drawing.Point(7, 30);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(127, 21);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Sum of Money :";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label14.ForeColor = System.Drawing.SystemColors.Control;
+            this.label14.Location = new System.Drawing.Point(137, 30);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(20, 21);
+            this.label14.TabIndex = 12;
+            this.label14.Text = "--";
             // 
             // Sale
             // 
@@ -691,5 +720,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label lblChange;
         private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label14;
     }
 }

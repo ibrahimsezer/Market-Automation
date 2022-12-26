@@ -58,9 +58,9 @@ namespace Market_Automation.Product_Section
                     }
                 }
             }
-            catch (Exception error)
+            catch (Exception)
             {
-                MessageBox.Show("Error: " + error);
+                MessageBox.Show("You have chosen a product that we do not have", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             
         }
@@ -83,6 +83,7 @@ namespace Market_Automation.Product_Section
             unitCount.Text = "0";        
         }
 
+        float count = 0;
         private void btnAdd_Click(object sender, EventArgs e)
         {
             try
@@ -90,8 +91,11 @@ namespace Market_Automation.Product_Section
                 float Kg = float.Parse(txtKgPrice.Text);
                 float Unit = float.Parse(txtUnitPrice.Text);
                 float total = (Kg + Unit) * float.Parse(unitCount.Text);
-                string totalPrice = Convert.ToString(total);
-                listReceipt.Items.Add(unitCount.Text + " Unit '" + lblName.Text + "', Kg Price:" + txtKgPrice.Text + ", Unit Price:" + txtUnitPrice.Text + ", Total Price:" + totalPrice);
+
+                count = count + total;
+
+                string totalPrice = Convert.ToString(count);
+                listReceipt.Items.Add(unitCount.Text + " Unit '" + lblName.Text + "', Kg Price:" + txtKgPrice.Text + ", Unit Price:" + txtUnitPrice.Text + ", Total Price:" + total);
                 lbltotalPrice.Text = (totalPrice);
             }
             catch (Exception error)
@@ -123,6 +127,7 @@ namespace Market_Automation.Product_Section
             unitCount.Text = "0";
 
             listReceipt.Items.Clear();
+            count = 0;
         }
 
         private void btnCut_Click(object sender, EventArgs e)
@@ -138,7 +143,7 @@ namespace Market_Automation.Product_Section
         {
             e.Graphics.PageUnit = GraphicsUnit.Millimeter;
             int leading = 5;
-            int leftMargin = 80;
+            int leftMargin = 150;
             int topMargin = 10;
 
             // a few simple formatting options..
@@ -171,6 +176,11 @@ namespace Market_Automation.Product_Section
         private void btnBread_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnSell_Click(object sender, EventArgs e)
+        {
+            btnCancel_Click(sender, e);
         }
     }
 }
