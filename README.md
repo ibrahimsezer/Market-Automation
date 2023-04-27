@@ -11,15 +11,3 @@ Login Page
 ================================================================
 https://github.com/ibrahimsezer/Market-Automation/blob/main/MarketAutomation_LoginPage.png
 ================================================================
-Home Page
-================================================================
-https://github.com/ibrahimsezer/Market-Automation/blob/main/MarketAutomation_Homepage.png
-================================================================
-Product Page
-================================================================
-https://github.com/ibrahimsezer/Market-Automation/blob/main/MarketAutomation_Products.png
-================================================================
-Sale Page
-================================================================
-https://github.com/ibrahimsezer/Market-Automation/blob/main/MarketAutomation_Sale.png
-================================================================
