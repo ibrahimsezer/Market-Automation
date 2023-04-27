@@ -9,17 +9,17 @@ A sales screen where product sales transactions take place.
 
 Login Page
 ================================================================
-https://github.com/ibrahimsezer/Market-Automation/blob/main/MarketAutomation_LoginPage.jpg
+https://github.com/ibrahimsezer/Market-Automation/blob/main/MarketAutomation_LoginPage.png
 ================================================================
 Home Page
 ================================================================
-https://github.com/ibrahimsezer/Market-Automation/blob/main/MarketAutomation_Homepage.jpg
+https://github.com/ibrahimsezer/Market-Automation/blob/main/MarketAutomation_Homepage.png
 ================================================================
 Product Page
 ================================================================
-https://github.com/ibrahimsezer/Market-Automation/blob/main/MarketAutomation_Products.jpg
+https://github.com/ibrahimsezer/Market-Automation/blob/main/MarketAutomation_Products.png
 ================================================================
 Sale Page
 ================================================================
-https://github.com/ibrahimsezer/Market-Automation/blob/main/MarketAutomation_Sale.jpg
+https://github.com/ibrahimsezer/Market-Automation/blob/main/MarketAutomation_Sale.png
 ================================================================
