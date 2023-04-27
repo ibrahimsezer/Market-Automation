@@ -7,19 +7,15 @@ A form screen listing the products. A form screen where product adding, product 
 A sales screen where product sales transactions take place. 
 
 
-Login Page
 ================================================================
-https://github.com/ibrahimsezer/Market-Automation/blob/main/MarketAutomation_LoginPage.png
+![MarketAutomation_Homepage](https://user-images.githubusercontent.com/100922010/234938045-c5fee4a3-fd04-406b-8e18-5e94aee3570a.png)
 ================================================================
-Home Page
+![MarketAutomation_Sale](https://user-images.githubusercontent.com/100922010/234938080-985b76bf-d626-45b5-b501-9fd169cbc1d1.png)
 ================================================================
-https://github.com/ibrahimsezer/Market-Automation/blob/main/MarketAutomation_Homepage.png
+![MarketAutomation_LoginPage](https://user-images.githubusercontent.com/100922010/234938088-f51093a4-aff0-436b-a2e5-26b270eaaafe.png)
 ================================================================
-Product Page
+![MarketAutomation_Products](https://user-images.githubusercontent.com/100922010/234938090-2155ab60-0f08-40bd-bd42-208f99e64723.png)
 ================================================================
-https://github.com/ibrahimsezer/Market-Automation/blob/main/MarketAutomation_Products.png
+![ER1](https://user-images.githubusercontent.com/100922010/234938108-b39be74e-6093-47c9-aa10-084d084c4b47.png)
 ================================================================
-Sale Page
-================================================================
-https://github.com/ibrahimsezer/Market-Automation/blob/main/MarketAutomation_Sale.png
-================================================================
+
