@@ -5,3 +5,21 @@ A modern form interface created with Template.
 An admin panel with user listing, adding, deleting and updating operations. 
 A form screen listing the products. A form screen where product adding, product deleting, product updating, product filtering operations are performed. 
 A sales screen where product sales transactions take place. 
+
+
+Login Page
+================================================================
+https://github.com/ibrahimsezer/Market-Automation/blob/main/MarketAutomation_LoginPage.jpg
+================================================================
+Home Page
+================================================================
+https://github.com/ibrahimsezer/Market-Automation/blob/main/MarketAutomation_Homepage.jpg
+================================================================
+Product Page
+================================================================
+https://github.com/ibrahimsezer/Market-Automation/blob/main/MarketAutomation_Products.jpg
+================================================================
+Sale Page
+================================================================
+https://github.com/ibrahimsezer/Market-Automation/blob/main/MarketAutomation_Sale.jpg
+================================================================
